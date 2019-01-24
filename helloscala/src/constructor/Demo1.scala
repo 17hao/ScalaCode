@@ -2,16 +2,17 @@ package constructor
 
 object OopDemo {
   def main(args: Array[String]): Unit = {
-    val person = new Person("s", 22)
+    val person = new Person("sqh", 22)
     print(person)
   }
 }
 
+// 主构造方法就是类名后面的“（）”
 class Person(inName: String, inAge: Int) {
-  var name: String = inName
-  var age: Int = inAge
+  val name: String = inName
+  val age: Int = inAge
 
   override def toString: String = {
-    "name: " + this.name + "age: " + this.age
+    "name: " + this.name + "\tage: " + this.age
   }
 }

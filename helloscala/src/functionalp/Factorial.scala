@@ -1,4 +1,7 @@
+package functionalp
+
 object Factorial {
+  // 计算阶乘
   def main(args: Array[String]): Unit = {
     println(factorial(5))
     print(factorial(5, 1))

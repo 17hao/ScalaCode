@@ -1,3 +1,5 @@
+package functionalp
+
 object Fibo {
   def main(args: Array[String]): Unit = {
     /*     斐波那契数列

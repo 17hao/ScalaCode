@@ -1,3 +1,5 @@
+package basic
+
 object varDemo {
   def main(args: Array[String]): Unit = {
     val num1 = 20

@@ -1,3 +1,5 @@
+package basic
+
 object Hello {
   def main(args: Array[String]): Unit = {
     val tmp = 0

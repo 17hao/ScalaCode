@@ -1,3 +1,5 @@
+package functionalp
+
 object FuncDemo {
   def main(args: Array[String]): Unit = {
     val num1 = 10

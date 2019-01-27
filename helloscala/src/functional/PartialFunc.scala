@@ -2,6 +2,7 @@ package functional
 
 object PartialFunc {
   def main(args: Array[String]): Unit = {
+    // 局部函数
     val handle1to6 = convert1to3 orElse convert4to6
     println(handle1to6(1))
     println(handle1to6(5))

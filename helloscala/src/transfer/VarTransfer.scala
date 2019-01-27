@@ -1,6 +1,6 @@
-package basic
+package transfer
 
-object Demo3 {
+object VarTransfer {
   def main(args: Array[String]): Unit = {
     val num = 1
     val num2: Double = num

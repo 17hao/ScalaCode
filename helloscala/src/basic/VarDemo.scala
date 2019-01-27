@@ -1,6 +1,6 @@
 package basic
 
-object varDemo {
+object VarDemo {
   def main(args: Array[String]): Unit = {
     val num1 = 20
     val num2 = 30

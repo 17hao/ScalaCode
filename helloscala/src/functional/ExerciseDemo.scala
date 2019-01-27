@@ -1,4 +1,4 @@
-package functionalp
+package functional
 
 object ExerciseDemo {
   def main(args: Array[String]): Unit = {

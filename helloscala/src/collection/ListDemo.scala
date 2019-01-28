@@ -1,4 +1,4 @@
-package basic
+package collection
 
 object ListDemo {
   def main(args: Array[String]): Unit = {

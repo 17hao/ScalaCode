@@ -5,3 +5,6 @@ LearnProject/*
 out
 *.java
 *.iml
+project
+target
+*.sbt

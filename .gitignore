@@ -1,4 +1,5 @@
 *.class
+
 *.log
 .idea
 LearnProject/*
@@ -8,3 +9,11 @@ out
 project
 target
 *.sbt
+
+gradle
+logs
+target
+test
+build.gradle
+gradlew
+gradlew.bat

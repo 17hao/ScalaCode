@@ -19,8 +19,9 @@ class MyController @Inject()(config: Configuration, c: ControllerComponents) ext
 
   // 加入一个HTTP请求
   // 通常情况下用implicit关键字修饰request,这样可以被其他APIs隐式调用
-  def echo() = Action { implicit request =>
-    Ok("Got request [" + request + "]")
+  def echo() = Action {
+    implicit request =>
+      Ok("Got request [" + request + "]")
   }
 
   // 创建不同类型的result

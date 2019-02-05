@@ -4,13 +4,20 @@
 # ~~~~
 
 # An example controller showing a sample home page
-GET     /                           controllers.HomeController.index
+GET        /                                               controllers.HomeController.index
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+GET        /assets/*file                                   controllers.Assets.versioned(path="/public", file: Asset)
 
-GET     /hello/:name                controllers.MyController.hello(name)
-GET     /index                      controllers.MyController.index()
-GET     /echo                       controllers.MyController.echo()
-GET     /getFoo                     controllers.MyController.getFoo()
-GET     /notFound                   controllers.MyController.notFound()
+GET        /hello/:name                                    controllers.MyController.hello(name)
+GET        /index                                          controllers.MyController.index()
+GET        /echo                                           controllers.MyController.echo()
+GET        /getFoo                                         controllers.MyController.getFoo()
+GET        /notFound                                       controllers.MyController.notFound()
+
+GET        /save1                                          controllers.AdvancedController.save1()
+
+
+GET        /hello.html                                     controllers.Assets.at(path="/public/html",file = "hello.html")
+GET        /public/javascripts/jquery-1.12.4.min.js        controllers.Assets.at(path="/public/javascripts", file="jquery-1.12.4.min.js")
+GET        /public/stylesheets/bootstrap.min.css           controllers.Assets.at(path="/public/stylesheets", file="bootstrap.min.css")

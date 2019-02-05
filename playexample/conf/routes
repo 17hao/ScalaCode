@@ -9,8 +9,8 @@ GET     /                           controllers.HomeController.index
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 
-GET     /hello                      controllers.HomeController.hello(name:String)
-GET     /index2                     controllers.HomeController.index2()
-GET     /index3                     controllers.HomeController.index3()
-GET     /echo                       controllers.HomeController.echo()
+GET     /hello/:name                controllers.MyController.hello(name)
+GET     /index                      controllers.MyController.index()
+GET     /echo                       controllers.MyController.echo()
 GET     /getFoo                     controllers.MyController.getFoo()
+GET     /notFound                   controllers.MyController.notFound()

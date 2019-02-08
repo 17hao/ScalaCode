@@ -21,3 +21,5 @@ GET        /save1                                          controllers.AdvancedC
 GET        /hello.html                                     controllers.Assets.at(path="/public/html",file = "hello.html")
 GET        /public/javascripts/jquery-1.12.4.min.js        controllers.Assets.at(path="/public/javascripts", file="jquery-1.12.4.min.js")
 GET        /public/stylesheets/bootstrap.min.css           controllers.Assets.at(path="/public/stylesheets", file="bootstrap.min.css")
+
+GET        /places                                          controllers.JsonController.listPlaces()

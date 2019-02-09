@@ -1,4 +1,4 @@
-package constructor
+package oop.constructor
 
 object AuxiliaryConstructor {
   def main(args: Array[String]): Unit = {

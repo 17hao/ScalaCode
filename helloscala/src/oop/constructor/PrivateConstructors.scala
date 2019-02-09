@@ -1,4 +1,4 @@
-package constructor
+package oop.constructor
 
 object PrivateConstructors {
   def main(args: Array[String]): Unit = {

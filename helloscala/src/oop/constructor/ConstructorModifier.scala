@@ -1,4 +1,4 @@
-package constructor
+package oop.constructor
 
 object ConstructorModifier {
   def main(args: Array[String]): Unit = {

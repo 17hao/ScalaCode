@@ -1,4 +1,4 @@
-package mixin
+package oop.mixin
 
 object Mixins {
   def main(args: Array[String]): Unit = {

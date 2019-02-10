@@ -1,13 +1,13 @@
 package basic
 
-object equalsDemo {
+object EqualsDemo {
   def main(args: Array[String]): Unit = {
     val sqh = new Employe("sqh", 22)
     println(sqh)
     val lyj = new Employe("lyj", 22)
     println(lyj)
     println(sqh == lyj)
-    println(sqh equals (lyj))
+    println(sqh equals lyj)
   }
 }
 

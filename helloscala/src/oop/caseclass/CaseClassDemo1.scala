@@ -1,8 +1,8 @@
 package oop.caseclass
 
-object caseClassDemo1 {
+object CaseClassDemo1 {
   def main(args: Array[String]): Unit = {
-    val person = new Person("sqh",22)
+    val person = Person("sqh",22)
     print(person+person.name)
   }
 }

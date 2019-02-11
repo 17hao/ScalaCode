@@ -9,11 +9,11 @@ object VarDemo {
     println(person.name + " " + person.age)
     person.name = "lyj"
     println(person.name)
-    for(i <- 1 to 3){
+    for (i <- 1 to 3) {
       print(person.name)
     }
     print("\n")
-    for(i <- 1 until 3){
+    for (i <- 1 until 3) {
       print(person.name)
     }
   }

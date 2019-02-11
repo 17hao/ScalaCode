@@ -1,24 +1,27 @@
 package etc
 
-case class User(id:Int,name:String,age:Int,gender:Option[String])
+case class User(id: Int, name: String, age: Int, gender: Option[String])
 
 object OptionDemo {
   private val users = Map(
-    1->User(1,"sqh",22,Some("male")),
-    2->User(2,"lyj",22,None))
-  def findById(id:Int):Option[User]={
+    1 -> User(1, "sqh", 22, Some("male")),
+    2 -> User(2, "lyj", 22, None))
+
+  def findById(id: Int): Option[User] = {
     users.get(id)
   }
-  def findAll: Iterable[User] ={
+
+  def findAll: Iterable[User] = {
     users.values
   }
+
   def main(args: Array[String]): Unit = {
     val user1 = OptionDemo.findById(1)
     val user2 = OptionDemo.findById(2)
-    if(user1.isDefined){
+    if (user1.isDefined) {
       println(user1.get.gender)
     }
-    else if(user2.isDefined){
+    else if (user2.isDefined) {
       println(user2.get.gender)
     }
   }

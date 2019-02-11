@@ -4,16 +4,8 @@
 .idea
 LearnProject/*
 out
-*.java
 *.iml
-project
 target
-*.sbt
 
-gradle
 logs
 target
-test
-build.gradle
-gradlew
-gradlew.bat

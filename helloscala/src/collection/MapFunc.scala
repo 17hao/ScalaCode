@@ -7,7 +7,7 @@ object MapFunc {
     // 包括类型的转换和每个元素值的转换
     val person_ = person.map(e => e.toUpperCase)
     println(person_)
-    val person__ = person.map(_ + " cute")
+    val person__ = person map(_ + " cute")
     println(person__)
 
     val age = Vector(1, 2, 3, 4)

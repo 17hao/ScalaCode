@@ -5,7 +5,11 @@
 LearnProject/*
 out
 *.iml
-target
 
+# Play application
+.g8
+grandle
 logs
 target
+build.grandle
+grandlew*

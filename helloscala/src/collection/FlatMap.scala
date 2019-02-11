@@ -1,7 +1,5 @@
 package collection
 
-import scala.collection.JavaConverters._
-
 object FlatMap {
   def main(args: Array[String]): Unit = {
     val list = List(List(1, 2), List(2, 3, 4, 5))

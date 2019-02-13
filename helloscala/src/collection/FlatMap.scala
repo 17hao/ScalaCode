@@ -23,6 +23,6 @@ object FlatMap {
     println(bag.map(toInt)) // List(Some(1), Some(2), None, Some(4), None)
     // flatten可以取出Some中的值并将None去掉
     println(bag.map(toInt).flatten) // List(1, 2, 4)
-    println(bag.flatMap(toInt).sum)
+    println(bag.flatMap(toInt).sum) // 7
   }
 }

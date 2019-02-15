@@ -17,4 +17,5 @@ libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "4.0.1
 // play.sbt.routes.RoutesKeys.routesImport += "com.sqh.binders._"
 
 libraryDependencies += "com.typesafe.play" %% "play-slick" % "3.0.0"
-libraryDependencies += "com.h2database" % "h2" % "1.4.192"
+libraryDependencies += "org.postgresql" % "postgresql" % "9.4.1209"
+//libraryDependencies += "com.h2database" % "h2" % "1.4.192"

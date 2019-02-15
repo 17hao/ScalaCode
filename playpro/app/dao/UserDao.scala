@@ -15,7 +15,7 @@ class UserDao @Inject()(dbConfigProvider: DatabaseConfigProvider)(implicit ec: E
 
   // 定义与数据库相对应的类
   private class UserTable(tag: Tag) extends Table[User](tag, "user") {
-    def id = column[Long]("id", O.PrimaryKey, O.AutoInc)
+    def id = column[Int]("id", O.PrimaryKey, O.AutoInc)
 
     def name = column[String]("name")
 
@@ -31,8 +31,8 @@ class UserDao @Inject()(dbConfigProvider: DatabaseConfigProvider)(implicit ec: E
   def list(): Future[Seq[User]] = db.run(user.result)
 
   // 新增一个用户
-  def create(name: String, age: Int): Future[Int] = db.run(
-    user.map(u => (u.name, u.age)) += (name, age)
+  def create(id: Int, name: String, age: Int): Future[Int] = db.run(
+    user.map(u => (u.id, u.name, u.age)) += (id, name, age)
   )
 
   //def create(name: String, age: Int): Future[User] = db.run {
@@ -43,12 +43,12 @@ class UserDao @Inject()(dbConfigProvider: DatabaseConfigProvider)(implicit ec: E
   //}
 
   // 删除一个用户
-  def delete(name: String): Future[Int] = db.run(
-    user.filter(_.name === name).delete
+  def delete(id: Int): Future[Int] = db.run(
+    user.filter(_.id === id).delete
   )
 
   // 修改一个用户
-  def modify(id: Long, name: String, age: Int): Future[Int] = db.run(
+  def modify(id: Int, name: String, age: Int): Future[Int] = db.run(
     (for (u <- user if u.id === id) yield (u.name, u.age)).update(name, age)
   )
 }

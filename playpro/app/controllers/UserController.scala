@@ -2,11 +2,11 @@ package controllers
 
 import javax.inject.Inject
 import dao.UserDao
+import models.User
 import play.api.mvc.{AbstractController, ControllerComponents}
 import play.api.libs.json._
-import play.api.libs.functional.syntax._
 
-import scala.concurrent.{ExecutionContext, Future}
+import scala.concurrent.ExecutionContext
 
 class UserController @Inject()(userDao: UserDao, cc: ControllerComponents)
                               (implicit ex: ExecutionContext) extends AbstractController(cc) {
@@ -25,5 +25,19 @@ class UserController @Inject()(userDao: UserDao, cc: ControllerComponents)
       user => Ok(Json.toJson(user))
     }
   }
-  def addUser(name:String,age:Int)=Action
+
+  def addUser = Action(parse.json)(
+    request =>
+      request.body.validate[User].fold(
+        errors => {
+          BadRequest(Json.obj("status" -> "KO", "message" -> JsError.toJson(errors)))
+        },
+        user => {
+          userDao.create(user.id, user.name, user.age)
+          Ok(Json.toJson("status" -> " Ok"))
+        }
+      )
+  )
+
+  def delUser=Action()
 }

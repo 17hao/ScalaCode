@@ -15,7 +15,6 @@ POST          /place               controllers.JsonController.savePlace
 
 # user CRUD
 GET           /users               controllers.UserController.getUsers
-#POST          /user                controllers.UserController.add
-#GET           /users/:id           controllers.UserController.getUser(id:Int)
+DELETE        /user/:id            controllers.UserController.delete(id:Int)
+POST          /user                controllers.UserController.addUser
 #POST          /users/:id           controllers.UserController.editUser(id:Int)
-#DELETE        /users/:id           controllers.UserController.delUser(id:Int)

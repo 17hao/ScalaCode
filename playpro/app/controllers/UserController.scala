@@ -30,14 +30,31 @@ class UserController @Inject()(userDao: UserDao, cc: ControllerComponents)
     request =>
       request.body.validate[User].fold(
         errors => {
-          BadRequest(Json.obj("status" -> "KO", "message" -> JsError.toJson(errors)))
+          BadRequest(Json.obj("status" -> "wrong", "message" -> JsError.toJson(errors)))
         },
         user => {
           userDao.create(user.id, user.name, user.age)
-          Ok(Json.toJson("status" -> " Ok"))
+          Ok(Json.toJson("status" -> " ok"))
         }
       )
   )
 
-  def delUser=Action()
+  def updateUser = Action(parse.json)(
+    request =>
+      request.body.validate[User].fold(
+        errors => {
+          BadRequest(Json.obj("status" -> "wrong"))
+        },
+        user => {
+          userDao.update(user.id, user.name, user.age)
+          Ok(Json.toJson("status" -> "ok"))
+        }
+      )
+  )
+
+  def delUser(id: Int) = Action.async {
+    userDao.delete(id).map(
+      user => Ok(Json.toJson(user))
+    )
+  }
 }

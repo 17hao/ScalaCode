@@ -48,7 +48,7 @@ class UserDao @Inject()(dbConfigProvider: DatabaseConfigProvider)(implicit ec: E
   )
 
   // 修改一个用户
-  def modify(id: Int, name: String, age: Int): Future[Int] = db.run(
+  def update(id: Int, name: String, age: Int): Future[Int] = db.run(
     (for (u <- user if u.id === id) yield (u.name, u.age)).update(name, age)
   )
 }

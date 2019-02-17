@@ -3,8 +3,7 @@ package dao
 import javax.inject.Inject
 import models.User
 import play.api.db.slick.DatabaseConfigProvider
-import slick.jdbc.JdbcProfile
-
+import slick.jdbc.JdbcProfilei
 import scala.concurrent.{ExecutionContext, Future}
 
 class UserDao @Inject()(dbConfigProvider: DatabaseConfigProvider)(implicit ec: ExecutionContext) {

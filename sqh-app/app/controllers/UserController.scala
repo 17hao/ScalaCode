@@ -12,8 +12,8 @@ class UserController @Inject()(userDAO: UserDAO, cc: ControllerComponents)(impli
   def addUser = Action(parse.json) {
     request =>
       request.body.validate[User].fold(
-        errors => {
-          BadRequest(Json.obj("status" -> "wrong", "message" -> errors.toString))
+        error => {
+          BadRequest(Json.obj("status" -> "wrong", "message" -> error.toString))
         },
         user => {
           userDAO.createUser(user.name, user.age)
@@ -22,10 +22,28 @@ class UserController @Inject()(userDAO: UserDAO, cc: ControllerComponents)(impli
       )
   }
 
-  //  def delUser(id: Int) = Action {
-  //    userDAO.delUser(id).map(
-  //      user => Ok(Json.toJson(""))
-  //    ).getOrElse()
-  //  }
-  //}
+  def delUser(id: Int) = Action.async(
+    userDAO.delUser(id).map(
+      user =>
+        if (user == 1) // 删除成功返回1
+          Ok(Json.obj("status" -> "ok"))
+        else (BadRequest(Json.obj("status" -> "wrong", "message" -> "not found")))
+    )
+  )
+
+  def updateUser = Action(parse.json) {
+    request =>
+      request.body.validate[User].fold(
+        error =>
+          BadRequest(Json.obj("status" -> "wrong", "message" -> error.toString)),
+        user =>
+          Ok(Json.obj("status" -> "ok","message"->user.name))
+      )
+  }
+
+  def getUsers = Action.async(
+    userDAO.getUsers().map(
+      user => Ok(Json.toJson(user))
+    )
+  )
 }

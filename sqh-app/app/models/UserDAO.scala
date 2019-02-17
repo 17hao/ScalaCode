@@ -37,5 +37,11 @@ class UserDAO @Inject()(dbConfigProvider: DatabaseConfigProvider)(implicit ec: E
     users.filter(_.id === id).delete
   )
 
+  def updateUser(id: Int, name: String, age: Int) = db.run(
+    (for (u <- users if u.id === id) yield (u.name, u.age)).update(name, age)
+  )
 
+  def getUsers() = db.run(
+    users.result
+  )
 }

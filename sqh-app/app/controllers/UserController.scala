@@ -17,7 +17,7 @@ class UserController @Inject()(userDAO: UserDAO, cc: ControllerComponents)(impli
         },
         user => {
           userDAO.createUser(user.name, user.age)
-          Ok(Json.obj("status" -> "ok"))
+          Ok(Json.obj("status" -> "ok", "message" -> "create success"))
         }
       )
   }
@@ -26,7 +26,7 @@ class UserController @Inject()(userDAO: UserDAO, cc: ControllerComponents)(impli
     userDAO.delUser(id).map(
       user =>
         if (user == 1) // 删除成功返回1
-          Ok(Json.obj("status" -> "ok"))
+          Ok(Json.obj("status" -> "ok", "message" -> "delete success"))
         else (BadRequest(Json.obj("status" -> "wrong", "message" -> "not found")))
     )
   )
@@ -37,7 +37,7 @@ class UserController @Inject()(userDAO: UserDAO, cc: ControllerComponents)(impli
         error =>
           BadRequest(Json.obj("status" -> "wrong", "message" -> error.toString)),
         user =>
-          Ok(Json.obj("status" -> "ok","message"->user.name))
+          Ok(Json.obj("status" -> "ok", "message" -> "update success"))
       )
   }
 

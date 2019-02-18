@@ -4,7 +4,7 @@ import javax.inject.Inject
 import play.api.db.slick.DatabaseConfigProvider
 import slick.jdbc.JdbcProfile
 
-import scala.concurrent.ExecutionContext
+import scala.concurrent.{ExecutionContext, Future}
 
 class UserDAO @Inject()(dbConfigProvider: DatabaseConfigProvider)(implicit ec: ExecutionContext) {
 
@@ -41,7 +41,8 @@ class UserDAO @Inject()(dbConfigProvider: DatabaseConfigProvider)(implicit ec: E
     (for (u <- users if u.id === id) yield (u.name, u.age)).update(name, age)
   )
 
-  def getUsers() = db.run(
+  // 返回值类型好像推断不出来所以具体指明
+  def getUsers(): Future[Seq[User]] = db.run(
     users.result
   )
 }

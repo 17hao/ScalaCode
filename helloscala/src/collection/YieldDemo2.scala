@@ -8,7 +8,15 @@ object YieldDemo2 {
     println(res) // hieflmlmop
     // 执行步骤：
     // 0依次和hello每个字符匹配
-    val res_ = for (n <- 0 to 1; ch <- "hello") yield (n + ch).toChar
+    // val res_ = for (n <- 0 to 1; ch <- "hello") yield (n + ch).toChar
+    // 使用for comprehension时以上是不好的代码风格，以下是好的风格
+    val res_ = for {
+      n <- 0 to 1
+      ch <- "hello"
+    } yield (n + ch).toChar
     println(res_) // Vector(h, e, l, l, o, i, f, m, m, p)
+    // 没有yield 时好的代码风格
+    for (n <- 0 to 1; ch <- "hello")
+      println(n, ch)
   }
 }

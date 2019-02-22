@@ -4,7 +4,7 @@ object SideEffect {
   def main(args: Array[String]): Unit = {
     val list = List("one", "two", "three")
     printSomething(list)
-    print(printSomething_(list))
+    print(printSomethingFunctional(list))
   }
 
   // 函数式编程的风格是没有副作用
@@ -16,7 +16,7 @@ object SideEffect {
   // 没有副作用的函数式风格
   // 只产生一个返回值
   // 通过函数的调用实现功能
-  def printSomething_(list: List[String]) = {
+  def printSomethingFunctional(list: List[String]) = {
     list.mkString("\n")
   }
 }

@@ -9,6 +9,7 @@ object Fibonacci {
     print("tail_recursive_fibo: " + fibo(0, 1, index))
   }
 
+  /*
   def fibo(index: Int): Int = {
     if (index == 0) {
       0
@@ -18,12 +19,22 @@ object Fibonacci {
       fibo(index - 1) + fibo(index - 2)
     }
   }
+  */
 
+  // 更优雅的写法
+  def fibo(index: Int): Int = index match {
+    case 0 => 0
+    case 1 => 1
+    case _ => fibo(index - 1) + fibo(index - 2)
+  }
+
+  // 更优雅的写法
   def fibo(num1: Int, num2: Int, index: Int): Int = {
-    if (index == 0) {
-      num1
-    } else {
-      fibo(num2, num1 + num2, index - 1)
-    }
+    //if (index == 0) {
+    //  num1
+    //} else {
+    //  fibo(num2, num1 + num2, index - 1)
+    //}
+    if (index == 0) num1 else fibo(num2, num1 + num2, index - 1)
   }
 }

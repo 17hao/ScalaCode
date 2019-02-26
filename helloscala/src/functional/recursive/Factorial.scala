@@ -8,6 +8,7 @@ object Factorial {
   }
 
   // 普通递归
+  /*
   def factorial(n: Int): Int = {
     if (n <= 0) {
       0
@@ -17,15 +18,26 @@ object Factorial {
       factorial(n - 1) * n
     }
   }
+  */
+
+  def factorial(n: Int): Int = n match {
+    case 0 => 0
+    case 1 => 1
+    case _ => factorial(n - 1) * n
+
+  }
 
   // 尾递归
-  def factorial(n: Int, tmp: Int): Int = {
-    if (n <= 0) {
-      0
-    } else if (n == 1) {
-      tmp
-    } else {
-      factorial(n - 1, n * tmp)
-    }
+  def factorial(n: Int, tmp: Int): Int = n match {
+    //if (n <= 0) {
+    //  0
+    //} else if (n == 1) {
+    //  tmp
+    //} else {
+    //  factorial(n - 1, n * tmp)
+    //}
+    case 0 => 0
+    case 1 => tmp
+    case _ => factorial(n - 1, n * tmp)
   }
 }

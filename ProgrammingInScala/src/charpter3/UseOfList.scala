@@ -11,6 +11,7 @@ object UseOfList {
     val onetwoThree = 1 :: twoThree
     print(onetwoThree + "\n")
     // 另一种创建List的方法，Nil代表空
+    // 之所以要在Nil前面添加元素是因为::是List的方法，而不是Int/String之类的方法
     val list = 1 :: 2 :: 3 :: Nil
     println(list)
   }

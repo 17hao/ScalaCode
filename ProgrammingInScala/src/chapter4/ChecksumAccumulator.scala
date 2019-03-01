@@ -1,4 +1,4 @@
-package charpter4
+package chapter4
 
 class ChecksumAccumulator {
   private var sum = 0

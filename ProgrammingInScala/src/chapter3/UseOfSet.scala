@@ -1,4 +1,4 @@
-package charpter3
+package chapter3
 
 object UseOfSet {
   def main(args: Array[String]): Unit = {

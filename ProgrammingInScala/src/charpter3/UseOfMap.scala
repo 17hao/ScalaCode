@@ -7,6 +7,8 @@ object UseOfMap {
     println(1 -> "sqh")
     val nameMap = mutable.Map[Int, String]()
     nameMap += (1 -> "sqh")
+    nameMap += (2 -> "lyj")
     println(nameMap)
+    println(nameMap.contains(1))
   }
 }

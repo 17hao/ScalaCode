@@ -23,10 +23,24 @@ class Rational(n: Int, d: Int) {
     if (b == 0) a else gcd(b, a % b) // scala中优先使用尾递归
   }
 
+  def +(n: Int): Rational = {
+    new Rational(
+      numerator + n * denominator,
+      denominator
+    )
+  }
+
   def +(rational: Rational): Rational = {
     new Rational(
       numerator * rational.denominator + rational.numerator * denominator,
       denominator * rational.denominator
+    )
+  }
+
+  def *(n: Int): Rational = {
+    new Rational(
+      numerator * n,
+      denominator
     )
   }
 

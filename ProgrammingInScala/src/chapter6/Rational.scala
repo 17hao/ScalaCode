@@ -20,12 +20,19 @@ class Rational(n: Int, d: Int) {
   override def toString: String = numerator + "/" + denominator // ④重写toString方法
 
   def gcd(a: Int, b: Int): Int = {
-    if (b == 0) a else gcd(b, a % b)
+    if (b == 0) a else gcd(b, a % b) // scala中优先使用尾递归
   }
 
   def +(rational: Rational): Rational = {
     new Rational(
       numerator * rational.denominator + rational.numerator * denominator,
+      denominator * rational.denominator
+    )
+  }
+
+  def *(rational: Rational): Rational = {
+    new Rational(
+      numerator * rational.numerator,
       denominator * rational.denominator
     )
   }

@@ -7,5 +7,7 @@ object Demo {
     val num3 = new Rational(1, 4)
     val sum = num1 + num2 + num3
     println(sum)
+    val product = num1 * num2 + num3
+    println(product)
   }
 }

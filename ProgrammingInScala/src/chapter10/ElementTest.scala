@@ -1,7 +1,7 @@
 package chapter10
 
 object ElementTest extends App {
-  val arrayElement = new ArrayElement(Array("***", "hello"))
-  println(arrayElement.length)
-  println(arrayElement.contents)
+  val arrayElement = new ArrayElement(Array("***hello", "hello***"))
+  println(arrayElement.width)
+  println(arrayElement)
 }

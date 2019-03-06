@@ -26,7 +26,7 @@ abstract class Element {
   }
 
   // 将2个图案左右组合
-  def beside(element: Element) = {
+  def beside(element: Element): Element = {
     new ArrayElement(
       for ((line1, line2) <- this.contents zip element.contents) //zip将2个数组每个元素交叉混合
         yield line1 + line2 //yield可以生成一个和被遍历的集合类型相同的集合

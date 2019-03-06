@@ -19,4 +19,17 @@ abstract class Element {
 
   // scala中如果子类先于父类实现了某种方法，父类中实现了改方法后，子类方法不能用override修饰符¬
   override def toString: String = contents mkString "\n"
+
+  // 将2个图案上下叠加组合
+  def above(element: Element): Element = {
+    new ArrayElement(this.contents ++ element.contents)
+  }
+
+  // 将2个图案左右组合
+  def beside(element: Element) = {
+    new ArrayElement(
+      for ((line1, line2) <- this.contents zip element.contents) //zip将2个数组每个元素交叉混合
+        yield line1 + line2 //yield可以生成一个和被遍历的集合类型相同的集合
+    )
+  }
 }

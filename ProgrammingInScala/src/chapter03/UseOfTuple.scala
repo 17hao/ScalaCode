@@ -1,4 +1,4 @@
-package chapter3
+package chapter03
 
 object UseOfTuple {
   def main(args: Array[String]): Unit = {

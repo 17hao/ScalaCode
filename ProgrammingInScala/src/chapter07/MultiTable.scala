@@ -1,4 +1,4 @@
-package chapter7
+package chapter07
 
 import scala.collection.immutable
 

@@ -1,4 +1,4 @@
-package chapter8
+package chapter08
 
 object PartiallyApplyedFunc {
   def main(args: Array[String]): Unit = {

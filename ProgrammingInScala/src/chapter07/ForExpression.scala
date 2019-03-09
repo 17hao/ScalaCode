@@ -1,4 +1,4 @@
-package chapter7
+package chapter07
 
 object ForExpression {
   def main(args: Array[String]): Unit = {

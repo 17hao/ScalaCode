@@ -1,4 +1,4 @@
-package chapter8
+package chapter08
 
 object FunctionLiteral extends App {
   /*

@@ -23,4 +23,13 @@ object FlatMap2 extends App {
   println(xsTmp)
   println(ys)
   println(zs)
+
+  val s = Seq("string", "map")
+  val sf = s.flatMap { str =>
+    if (str == "string")
+      str.split("r")
+    else
+      str.split("a")
+  }
+  println(sf)
 }

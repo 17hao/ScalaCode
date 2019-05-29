@@ -1,6 +1,6 @@
 package chapter02.exercise
 
-object Exercise02 {
+object Exercise2_2 {
   /**
     * Check whether an Array[A] is sorted according to a given comparison function
     *

@@ -4,7 +4,7 @@ package chapter02.exmaple
   * Adapt our program to print both the absolute value of a number
   * and the factorial of another number
   */
-object Example01 extends App {
+object Example2_1 extends App {
   /**
     * Calculate the absolute value of a number
     *

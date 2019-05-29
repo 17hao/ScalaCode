@@ -1,6 +1,6 @@
 package chapter02.exercise
 
-object Exercise01 extends App {
+object Exercise2_1 extends App {
   /**
     * Get the nth Fibonacci number
     * The first Fibonacci numbers are 0 and 1

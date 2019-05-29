@@ -1,6 +1,6 @@
 package chapter02.exmaple
 
-object Example02 {
+object Example2_2 {
   /**
     * Search the first index of a String in an array
     *
@@ -54,7 +54,9 @@ object Example02 {
     val ss = Array("a", "b", "c")
     val is = Array(1, 2, 3, 4, 5, 6, 7)
 
+    def gt(x: Int, y: Int): Boolean = if (x > y) true else false
+
     println(findFirst(ss, "d"))
-    println(binarySearch[Int](is, 7, (x, y) => if (x > y) true else false))
+    println(binarySearch(is, 7, gt))
   }
 }

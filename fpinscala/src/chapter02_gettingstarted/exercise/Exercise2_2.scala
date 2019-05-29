@@ -1,4 +1,4 @@
-package chapter02.exercise
+package chapter02_gettingstarted.exercise
 
 object Exercise2_2 {
   /**

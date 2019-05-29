@@ -1,4 +1,4 @@
-package chapter02.exmaple
+package chapter02_gettingstarted.exmaple
 
 /**
   * Adapt our program to print both the absolute value of a number

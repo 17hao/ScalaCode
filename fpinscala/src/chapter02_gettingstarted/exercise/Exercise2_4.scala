@@ -1,8 +1,8 @@
-package chapter02.exercise
+package chapter02_gettingstarted.exercise
 
 object Exercise2_4 {
   /**
-    *
+    * uncurry
     *
     * @param f
     * @tparam A

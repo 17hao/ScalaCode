@@ -1,4 +1,4 @@
-package chapter02.exmaple
+package chapter02_gettingstarted.exmaple
 
 object Example2_2 {
   /**

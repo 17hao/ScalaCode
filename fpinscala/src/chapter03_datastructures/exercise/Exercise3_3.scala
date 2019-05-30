@@ -1,0 +1,16 @@
+package chapter03_datastructures.exercise
+
+import chapter03_datastructures.example.{Cons, List}
+
+object Exercise3_3 {
+  def setHead[A](xs: List[A], h: A): List[A] = xs match {
+    case Cons(_, tail) => Cons(h, tail)
+  }
+
+  def main(args: Array[String]): Unit = {
+    val list = List(1, 2, 3, 4, 5, 6)
+    val h = 100
+    val res = setHead(list, h)
+    println(res)
+  }
+}

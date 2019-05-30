@@ -1,4 +1,4 @@
-package functional
+package fp
 
 object CurryingDemo {
   def main(args: Array[String]): Unit = {

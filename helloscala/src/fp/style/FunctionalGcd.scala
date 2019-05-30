@@ -1,4 +1,4 @@
-package functional.style
+package fp.style
 
 object FunctionalGcd {
   def main(args: Array[String]): Unit = {

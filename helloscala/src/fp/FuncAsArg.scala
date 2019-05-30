@@ -1,4 +1,4 @@
-package functional
+package fp
 
 object FuncAsArg {
   // 接受函数作(方法）为参数

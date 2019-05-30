@@ -1,4 +1,4 @@
-package functional.recursive
+package fp.recursive
 
 object Fibonacci {
   def main(args: Array[String]): Unit = {

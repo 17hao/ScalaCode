@@ -1,4 +1,4 @@
-package functional.recursive
+package fp.recursive
 
 object Factorial {
   // 计算阶乘

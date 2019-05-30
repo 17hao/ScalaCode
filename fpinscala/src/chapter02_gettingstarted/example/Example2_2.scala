@@ -1,4 +1,4 @@
-package chapter02_gettingstarted.exmaple
+package chapter02_gettingstarted.example
 
 object Example2_2 {
   /**

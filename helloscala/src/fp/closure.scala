@@ -1,4 +1,4 @@
-package functional
+package fp
 
 object closure {
   // 函数闭包的一个简单例子

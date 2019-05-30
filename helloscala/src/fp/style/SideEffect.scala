@@ -1,4 +1,4 @@
-package functional.style
+package fp.style
 
 object SideEffect {
   def main(args: Array[String]): Unit = {

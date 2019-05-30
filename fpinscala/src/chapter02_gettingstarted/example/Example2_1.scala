@@ -1,4 +1,4 @@
-package chapter02_gettingstarted.exmaple
+package chapter02_gettingstarted.example
 
 /**
   * Adapt our program to print both the absolute value of a number

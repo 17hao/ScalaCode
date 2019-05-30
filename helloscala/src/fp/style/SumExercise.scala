@@ -1,4 +1,4 @@
-package functional.style
+package fp.style
 
 // calculate the sum of a to b
 object SumExercise {

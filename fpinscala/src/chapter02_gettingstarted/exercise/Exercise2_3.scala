@@ -2,6 +2,7 @@ package chapter02_gettingstarted.exercise
 
 object Exercise2_3 {
   /**
+    * currying
     * Transfer a function with two arguments to a partial function with one argument
     *
     * @param f

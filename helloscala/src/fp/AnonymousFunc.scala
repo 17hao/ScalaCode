@@ -1,4 +1,4 @@
-package functional
+package fp
 
 object AnonymousFunc {
   // 函数(方法）可以作为变量传递

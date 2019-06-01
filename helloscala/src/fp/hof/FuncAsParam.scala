@@ -1,0 +1,16 @@
+package fp.hof
+
+object FuncAsParam {
+  /**
+    * Takes a function as parameter
+    * anonymous function <=> function literal
+    */
+  def hello[A](f: A => A, a: A): A = f(a)
+
+  def hi[A](f: => A): A = f
+
+  def main(args: Array[String]): Unit = {
+    println(hello[String](str => str.reverse, "hello"))
+    println(hi("hi"))
+  }
+}

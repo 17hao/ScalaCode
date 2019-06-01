@@ -1,28 +1,42 @@
 package collection
 
-object FlatMap {
-  def main(args: Array[String]): Unit = {
-    val list = List(List(1, 2), List(2, 3, 4, 5))
-    // flatten方法只可以用在只有内嵌序列（list、array、vector）作为元素的序列
-    val flatList = list.flatten
-    println(flatList) // List（1，2，2，3，4，5）
-    println(list.flatten.distinct) // List（1，2，3，4，5）
+/**
+  * @author 17hao
+  * @date 2019-4-10
+  */
+case class FlatMap(id: Int, attr: String)
 
-    val bag = List("1", "2", "three", "4", "one hundred")
+object FlatMap extends App {
+  val list = List("one", "two")
 
-    // 将每个可以转换为数字的元素转换并求和
-    def toInt(in: String): Option[Int] = {
-      try {
-        Some(Integer.parseInt(in))
-      } catch {
-        case _: Exception => None
-      }
-    }
-    // map将原List转换成包含Some和None的List
-    // map实现的是类型的转换
-    println(bag.map(toInt)) // List(Some(1), Some(2), None, Some(4), None)
-    // flatten可以取出Some中的值并将None去掉
-    println(bag.map(toInt).flatten) // List(1, 2, 4)
-    println(bag.flatMap(toInt).sum) // 7
-  }
+  /** output: Seq("one, "two") */
+  list.flatMap(str => Seq(str)).foreach(println(_))
+
+  /** str.toSeq: String => Seq[Char]
+    * Seq("o", "n", "e", "t", "w", "o")
+    * output: onetwo
+    */
+  list.flatMap(str => str.toSeq).foreach(print)
+
+  println("\n#############")
+
+  val map = Map(1 -> "one", 2 -> "two")
+
+  /** Each element in Map is a tuple
+    * output: (1,one)(2,two)
+    */
+  map.flatMap(e => Seq(e)).foreach(print)
+
+  /** output: onetwo */
+  map.flatMap(e => e._2).foreach(print)
+
+  println("\n############")
+
+  val m = FlatMap(1, "one")
+  val n = FlatMap(2, "two")
+
+  val lm = Map(1 -> List(m, "right1"), 2 -> List(n, "right2"))
+
+  /** output: left1right1left2right2 */
+  lm.flatMap(e => e._2).foreach(print)
 }

@@ -1,4 +1,4 @@
-package oop.accompany
+package oop.companion
 
 object AccompanyDemo {
   def main(args: Array[String]): Unit = {

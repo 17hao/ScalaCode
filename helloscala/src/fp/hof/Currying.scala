@@ -1,14 +1,20 @@
 package fp.hof
 
 object Currying extends App {
-  def curry[A](a: A)(f: A => A): A = f(a)
+  /**
+    * Currying a function causes the function to change from
+    * n parameters to n functions with one parameter
+    *
+    * In lambda calculation every function has one parameter
+    */
+  def currying[A, B](f: (A, B) => B): A => B => B = {
+    a => b => f(a, b)
+  }
 
-  /** Generate a temp function */
-  println(curry(4)(_))
+  def f(n: Int, s: String): String = {
+    s * n
+  }
 
-  /** Pass a function to the higher order function */
-  println(curry(4)(i => i * 2))
-
-  /** output: hello, sqh */
-  println(curry("sqh")(i => "hello, " + i))
+  /** output: hello,hello,hello, */
+  println(currying(f)(3)("hello, "))
 }

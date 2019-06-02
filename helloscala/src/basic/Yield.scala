@@ -1,6 +1,6 @@
-package collection
+package basic
 
-object YieldDemo2 {
+object Yield {
   def main(args: Array[String]): Unit = {
     // for comprehension
     // yield生成的集合和第一个生成器类型兼容

@@ -1,18 +1,19 @@
 package basic
 
-object EqualsDemo {
-  def main(args: Array[String]): Unit = {
-    val sqh = new Employe("sqh", 22)
-    println(sqh)
-    val lyj = new Employe("lyj", 22)
-    println(lyj)
-    println(sqh == lyj)
-    println(sqh equals lyj)
-  }
+object EqualsDemo extends App {
+  val sqh = Employee("sqh", 22)
+  println(sqh)
+  val lyj = Employee("lyj", 22)
+  val fakeLyj = lyj
+  println(lyj)
+  println(sqh == lyj) // output: false
+  println(sqh equals lyj) // output: false
+  println(fakeLyj == lyj) // output: true
+  println(fakeLyj equals fakeLyj) // output: true
 }
 
-class Employe(inName: String, inAge: Int) {
-  override def toString: String = "name is: " + inName + " age is: " + inAge
+case class Employee(name: String, age: Int) {
+  override def toString: String = "name: " + name + " age: " + age
 
   override def hashCode(): Int = super.hashCode()
 }

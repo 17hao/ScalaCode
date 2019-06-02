@@ -10,13 +10,13 @@ object FlatMap extends App {
   val list = List("one", "two")
 
   /** output: Seq("one, "two") */
-  list.flatMap(str => Seq(str)).foreach(println(_))
+  println(list.flatMap(str => Seq(str)))
 
   /** str.toSeq: String => Seq[Char]
     * Seq("o", "n", "e", "t", "w", "o")
     * output: onetwo
     */
-  list.flatMap(str => str.toSeq).foreach(print)
+  print(list.flatMap(str => str.toSeq))
 
   println("\n#############")
 
@@ -25,10 +25,10 @@ object FlatMap extends App {
   /** Each element in Map is a tuple
     * output: (1,one)(2,two)
     */
-  map.flatMap(e => Seq(e)).foreach(print)
+  println(map.flatMap(e => Seq(e)))
 
   /** output: onetwo */
-  map.flatMap(e => e._2).foreach(print)
+  print(map.flatMap(e => e._2))
 
   println("\n############")
 
@@ -38,5 +38,5 @@ object FlatMap extends App {
   val lm = Map(1 -> List(m, "right1"), 2 -> List(n, "right2"))
 
   /** output: left1right1left2right2 */
-  lm.flatMap(e => e._2).foreach(print)
+  print(lm.flatMap(e => e._2))
 }

@@ -6,4 +6,4 @@ object Demo2 {
   }
 }
 
-case class Notification(sender:String)
+case class Notification(sender: String)

@@ -1,19 +1,5 @@
 package oop.companion
 
-object Demo2 {
-  def main(args: Array[String]): Unit = {
-    // 调用伴生类的主构造器创建对象
-    val pig1 = new Pig("lyj")
-    println(pig1)
-
-    // 调用伴生对象的apply方法创建对象
-    val pig2 = Pig() // 调用apply()
-    println(pig2)
-    val pig3 = Pig("lyj") // 调用apply(pName)
-    print(pig3)
-  }
-}
-
 class Pig(pName: String) {
   val name: String = pName
 
@@ -28,4 +14,14 @@ object Pig {
   def apply(): Pig = new Pig("匿名猪猪")
 }
 
+object ApplyDemo extends App {
+  /** 调用伴生类的主构造器创建对象 */
+  val pig1 = new Pig("lyj")
+  println(pig1)
 
+  /** 调用伴生对象的apply方法创建对象 */
+  val pig2 = Pig() // 调用apply()
+  println(pig2)
+  val pig3 = Pig("lyj") // 调用apply(pName)
+  print(pig3)
+}

@@ -1,6 +1,6 @@
 package chapter03_datastructures.exercise
 
-import chapter03_datastructures.example.{Cons, List}
+import chapter03_datastructures.demostrate.{Cons, List}
 
 object Exercise3_2 {
   /**

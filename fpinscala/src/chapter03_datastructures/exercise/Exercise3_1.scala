@@ -1,7 +1,7 @@
 package chapter03_datastructures.exercise
 
-import chapter03_datastructures.example.List.sum
-import chapter03_datastructures.example.{Cons, List, Nil}
+import chapter03_datastructures.demostrate.List.sum
+import chapter03_datastructures.demostrate.{Cons, List, Nil}
 
 object Exercise3_1 {
   def main(args: Array[String]): Unit = {

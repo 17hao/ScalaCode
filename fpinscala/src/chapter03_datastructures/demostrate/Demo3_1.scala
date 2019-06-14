@@ -1,4 +1,4 @@
-package chapter03_datastructures.example
+package chapter03_datastructures.demostrate
 
 sealed trait List[+A]
 

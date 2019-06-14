@@ -1,25 +1,25 @@
 package chapter02_gettingstarted.exercise
 
+import scala.annotation.tailrec
+
 object Exercise2_1 extends App {
   /**
     * Get the nth Fibonacci number
     * The first Fibonacci numbers are 0 and 1
     *
-    * @param n
+    * @param n the nth number
     * @return
     */
   def fib(n: Int): Int = {
-    def go(n: Int, pre1: Int, pre2: Int): Int = {
-      if (n == 1)
-        pre1
-      else if (n == 2)
-        pre2
-      else
-        go(n - 1, pre2, pre1 + pre2)
+    @tailrec
+    def loop(pre1: Int, pre2: Int, n: Int): Int = {
+      if (n == 1) pre1
+      else if (n == 2) pre2
+      else loop(pre2, pre1 + pre2, n - 1)
     }
 
-    go(n, 0, 1)
+    loop(0, 1, n)
   }
 
-  println(fib(4))
+  print(fib(1))
 }

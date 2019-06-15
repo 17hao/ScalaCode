@@ -2,7 +2,7 @@ package chapter02_gettingstarted.exercise
 
 object Exercise2_3 {
   /**
-    * currying
+    * Currying
     * Transfer a function with two arguments to a partial function with one argument
     *
     * @param f
@@ -12,6 +12,6 @@ object Exercise2_3 {
     * @return
     */
   def curry[A, B, C](f: (A, B) => C): A => B => C = {
-    a: A => b: B => f(a, b)
+    a => b => f(a, b)
   }
 }

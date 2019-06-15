@@ -2,7 +2,7 @@ package chapter02_gettingstarted.exercise
 
 object Exercise2_4 {
   /**
-    * uncurry
+    * Uncurry
     *
     * @param f
     * @tparam A
@@ -11,6 +11,6 @@ object Exercise2_4 {
     * @return
     */
   def uncurry[A, B, C](f: A => B => C): (A, B) => C = {
-    (a: A, b: B) => f(a)(b)
+    (a, b) => f(a)(b)
   }
 }

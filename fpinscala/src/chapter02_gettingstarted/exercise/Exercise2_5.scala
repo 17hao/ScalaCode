@@ -2,7 +2,7 @@ package chapter02_gettingstarted.exercise
 
 object Exercise2_5 {
   /**
-    * combine 2 functions to 1
+    * Combine 2 functions to 1
     *
     * @param f
     * @param g
@@ -12,6 +12,6 @@ object Exercise2_5 {
     * @return
     */
   def compose[A, B, C](f: B => C, g: A => B): A => C = {
-    a: A => f(g(a))
+    a => f(g(a))
   }
 }

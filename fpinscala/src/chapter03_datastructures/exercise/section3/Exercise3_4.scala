@@ -1,4 +1,4 @@
-package chapter03_datastructures.exercise
+package chapter03_datastructures.exercise.section3
 
 import chapter03_datastructures.demostrate.{Cons, List}
 

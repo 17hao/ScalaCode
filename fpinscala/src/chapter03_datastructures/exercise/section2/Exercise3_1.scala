@@ -1,4 +1,4 @@
-package chapter03_datastructures.exercise
+package chapter03_datastructures.exercise.section2
 
 import chapter03_datastructures.demostrate.List.sum
 import chapter03_datastructures.demostrate.{Cons, List, Nil}

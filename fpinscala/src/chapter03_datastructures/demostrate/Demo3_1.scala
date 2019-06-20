@@ -18,6 +18,7 @@ object List {
     case Cons(x, xs) => x * product(xs)
   }
 
+  /* variadic function */
   def apply[A](as: A*): List[A] = {
     if (as.isEmpty) Nil
     /* `_*` tells the compiler to treat a single argument of a sequence type */

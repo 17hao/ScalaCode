@@ -1,21 +1,13 @@
 package oop.casekeyword
 
-class Person(n: String, a: Int) {
-  private val name = n
-
-  def getName: String = name
-}
+class Person(val name: String, age: Int)
 
 object Person {
   /** apply method in comparision object simplify the procedure l */
   def apply(name: String, age: Int): Person = new Person(name, age)
 }
 
-case class Employee(n: String, a: Int) extends Person(n, a) {
-  private val age = a
-
-  def getAge: Int = age
-}
+case class Employee(override val name: String, age: Int, h: Int) extends Person(name, age)
 
 case object Employee {
   val name = "e"
@@ -25,11 +17,11 @@ case object Employee {
 object Test {
   def main(args: Array[String]): Unit = {
     val person = Person("sqh", 22)
-    println(person.getName)
+    println(person.name)
 
-    val employee = Employee("lyj", 22)
-    println(employee.getAge)
+    val employee = Employee("lyj", 22, 160)
+    println(employee.age)
 
-    println(Employee.name + Employee.age)
+    println(Employee.name + " " + Employee.age + " " + employee.h)
   }
 }

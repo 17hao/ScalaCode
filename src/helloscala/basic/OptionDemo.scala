@@ -8,8 +8,6 @@ object OptionDemo {
     2 -> User(2, "lyj", 22, None)
   )
 
-  def findById(id: Int): Option[User] = users.get(id)
-
   def findAll: Iterable[User] = users.values
 
   def main(args: Array[String]): Unit = {
@@ -20,6 +18,8 @@ object OptionDemo {
     if (user2.isDefined)
       println(user2.flatMap(user => Option(user.name)).getOrElse("No such person"))
   }
+
+  def findById(id: Int): Option[User] = users.get(id)
 }
 
 

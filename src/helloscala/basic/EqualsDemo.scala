@@ -1,4 +1,4 @@
-package basic
+package helloscala.basic
 
 object EqualsDemo extends App {
   val sqh = Employee("sqh", 22)

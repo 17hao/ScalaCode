@@ -1,4 +1,4 @@
-package chapter02_gettingstarted.demonstrate
+package fpinscala.chapter02_gettingstarted.demonstrate
 
 /**
   * Adapt our program to print both the absolute value of a number

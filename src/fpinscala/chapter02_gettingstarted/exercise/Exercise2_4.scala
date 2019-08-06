@@ -1,4 +1,4 @@
-package chapter02_gettingstarted.exercise
+package fpinscala.chapter02_gettingstarted.exercise
 
 object Exercise2_4 {
   /**

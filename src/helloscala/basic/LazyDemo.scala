@@ -1,16 +1,14 @@
-package basic
+package helloscala.basic
 
 object LazyDemo extends App {
-  val builder = new StringBuilder
-
-  val x = {
-    builder += 'x'
-    1
-  }
-
   lazy val y = {
     builder += 'y'
     2
+  }
+  val builder = new StringBuilder
+  val x = {
+    builder += 'x'
+    1
   }
 
   def z = {

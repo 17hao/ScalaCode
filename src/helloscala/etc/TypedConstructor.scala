@@ -1,4 +1,4 @@
-package etc
+package helloscala.etc
 
 trait Boxed[T] {
   def unpack(): T

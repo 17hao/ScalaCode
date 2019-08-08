@@ -1,4 +1,4 @@
-package collection
+package helloscala.collection
 
 /**
   * @author 17hao
@@ -9,26 +9,27 @@ case class FlatMap(id: Int, attr: String)
 object FlatMap extends App {
   val list = List("one", "two")
 
-  /** output: Seq("one, "two") */
-  println(list.flatMap(str => Seq(str)))
+  /** output: List("one, "two") */
+  println(list.flatMap(Seq(_)))
 
   /** str.toSeq: String => Seq[Char]
-    * Seq("o", "n", "e", "t", "w", "o")
-    * output: onetwo
+    * output: List(o, n, e, t, w, o)
     */
-  print(list.flatMap(str => str.toSeq))
+  print(list.flatMap(_.toSeq))
 
   println("\n#############")
 
   val map = Map(1 -> "one", 2 -> "two")
 
   /** Each element in Map is a tuple
-    * output: (1,one)(2,two)
+    * output: Map(1 -> one, 2 -> two)
     */
-  println(map.flatMap(e => Seq(e)))
+  println(map.flatMap[(Int, String), Map[Int, String]](Seq(_)))
 
-  /** output: onetwo */
-  print(map.flatMap(e => e._2))
+  println(map.map(e => Seq(e)).flatten) // List((1,one), (2,two))
+
+  /** output: List(o, n, e, t, w, o) */
+  print(map.flatMap(_._2))
 
   println("\n############")
 

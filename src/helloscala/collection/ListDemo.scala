@@ -1,4 +1,4 @@
-package collection
+package helloscala.collection
 
 object ListDemo extends App {
   /**

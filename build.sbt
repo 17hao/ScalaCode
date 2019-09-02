@@ -4,5 +4,7 @@ scalaVersion := "2.12.8"
 
 lazy val root = (project in file("."))
   .settings(
-    libraryDependencies ++= deps
+    libraryDependencies ++= dependencies
   )
+
+scalaSource in Compile := file("src")

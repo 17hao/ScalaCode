@@ -7,5 +7,5 @@ object Dependencies {
   val akkaActor = "com.typesafe.akka" %% "akka-actor" % "2.5.23"
 
   // Projects
-  val deps = Seq(rediscala, gson, akkaActor)
+  val dependencies = Seq(rediscala, gson, akkaActor)
 }

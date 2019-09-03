@@ -1,4 +1,4 @@
-package helloscala.redis
+package redis
 
 import akka.actor.ActorSystem
 import redis.RedisClient

@@ -1,4 +1,4 @@
-package helloscala.kafka
+package kafka
 
 import java.util
 import java.util.Properties

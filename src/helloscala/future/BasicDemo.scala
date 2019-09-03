@@ -1,4 +1,4 @@
-package future
+package helloscala.future
 
 import scala.concurrent.{ExecutionContext, ExecutionContextExecutor, Future}
 import scala.util.{Failure, Success}

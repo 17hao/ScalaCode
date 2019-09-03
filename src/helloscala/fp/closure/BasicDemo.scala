@@ -1,4 +1,4 @@
-package fp.closure
+package helloscala.fp.closure
 
 object BasicDemo extends App {
   val more = 10

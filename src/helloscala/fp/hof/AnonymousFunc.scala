@@ -1,4 +1,4 @@
-package fp.hof
+package helloscala.fp.hof
 
 object AnonymousFunc extends App {
   def anonymous(a: Int, f: Int => Int): Int = {

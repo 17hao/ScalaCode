@@ -1,4 +1,4 @@
-package fp
+package helloscala.fp
 
 object MethodDiffFunc {
   // 函数和方法的细微区别和联系

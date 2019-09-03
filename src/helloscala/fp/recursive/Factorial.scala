@@ -1,4 +1,4 @@
-package fp.recursive
+package helloscala.fp.recursive
 
 object Factorial {
   // 计算阶乘

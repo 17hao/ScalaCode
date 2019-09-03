@@ -1,4 +1,4 @@
-package implicitt
+package helloscala.implicitt
 
 object ImplicitDemo {
   def main(args: Array[String]): Unit = {

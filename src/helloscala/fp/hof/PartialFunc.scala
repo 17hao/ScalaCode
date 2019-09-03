@@ -1,4 +1,4 @@
-package fp.hof
+package helloscala.fp.hof
 
 object PartialFunc extends App {
   def partial[A](a: A)(f: A => A): A = f(a)

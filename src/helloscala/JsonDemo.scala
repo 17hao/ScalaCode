@@ -29,6 +29,9 @@ object JsonDemo extends App {
     "k1" -> "v1",
     "k2" -> "v2"
   )
+
+  val num = Seq(" ", " ", " ")
+  println(new Gson().toJson(num.asJava))
 }
 
 class BagOfPrimitives {

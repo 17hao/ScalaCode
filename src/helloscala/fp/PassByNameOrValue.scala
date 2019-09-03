@@ -1,4 +1,4 @@
-package fp
+package helloscala.fp
 
 object PassByNameOrValue {
   def main(args: Array[String]): Unit = {

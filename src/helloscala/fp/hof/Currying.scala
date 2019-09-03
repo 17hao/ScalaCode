@@ -1,4 +1,4 @@
-package fp.hof
+package helloscala.fp.hof
 
 object Currying extends App {
   /**

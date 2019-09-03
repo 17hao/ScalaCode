@@ -1,4 +1,4 @@
-package fp.recursive
+package helloscala.fp.recursive
 
 object Fibonacci {
   def main(args: Array[String]): Unit = {

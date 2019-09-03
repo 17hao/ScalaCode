@@ -1,7 +1,6 @@
 package redis
 
 import akka.actor.ActorSystem
-import redis.RedisClient
 
 import scala.concurrent.ExecutionContext.Implicits.global
 
@@ -14,4 +13,6 @@ object Client extends App {
   client.setnx("fruit", "orange")
   client.lpush("fruits", "banana")
   client.lpushx("fruits", "pear")
+  client.hmset("user:1", Map("name" -> "sqh"))
+  client.stop()
 }

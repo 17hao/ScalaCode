@@ -8,3 +8,4 @@ lazy val root = (project in file("."))
   )
 
 scalaSource in Compile := file("src")
+resourceDirectory := file("src/protobuf")

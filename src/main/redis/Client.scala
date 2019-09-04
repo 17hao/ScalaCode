@@ -1,6 +1,7 @@
-package redis
+package main.redis
 
 import akka.actor.ActorSystem
+import redis.RedisClient
 
 import scala.concurrent.ExecutionContext.Implicits.global
 

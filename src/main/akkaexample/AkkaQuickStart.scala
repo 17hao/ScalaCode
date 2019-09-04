@@ -1,6 +1,6 @@
-package akka
+package main.akkaexample
 
-import akka.Printer.Greeting
+import Printer.Greeting
 import akka.actor.{Actor, ActorLogging, ActorRef, ActorSystem, Props}
 
 class Greeter(message: String, printer: ActorRef) extends Actor {

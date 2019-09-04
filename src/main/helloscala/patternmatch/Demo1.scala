@@ -1,4 +1,4 @@
-package helloscala.patternmatch
+package main.helloscala.patternmatch
 
 import scala.util.Random
 

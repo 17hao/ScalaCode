@@ -1,0 +1,1 @@
+//addSbtPlugin("io.grpc" % "protoc-gen-grpc-java" % "1.23.0")

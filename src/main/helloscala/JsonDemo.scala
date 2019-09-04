@@ -1,4 +1,4 @@
-package helloscala
+package main.helloscala
 
 import com.google.gson.Gson
 

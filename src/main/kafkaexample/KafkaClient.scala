@@ -1,4 +1,4 @@
-package kafka
+package main.kafkaexample
 
 import java.util
 import java.util.Properties

@@ -1,4 +1,4 @@
-package basic
+package xyz.shiqihao.misc.basic
 
 case class User(id: Int, name: String, age: Int, gender: Option[String])
 

@@ -1,4 +1,4 @@
-package basic
+package xyz.shiqihao.misc.basic
 
 object Yield {
   def main(args: Array[String]): Unit = {

@@ -1,4 +1,4 @@
-package fp.style
+package xyz.shiqihao.misc.fp.style
 
 // calculate the sum of a to b
 object SumExercise {

@@ -1,4 +1,4 @@
-package basic
+package xyz.shiqihao.misc.basic
 
 object Varargs extends App {
   val res = sum(1, 2, 3, 4, 5, 6, 7)

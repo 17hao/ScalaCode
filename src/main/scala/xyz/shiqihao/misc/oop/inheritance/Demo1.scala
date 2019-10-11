@@ -1,4 +1,4 @@
-package oop.inheritance
+package xyz.shiqihao.misc.oop.inheritance
 
 object Test extends App {
   val c = new Car("car")

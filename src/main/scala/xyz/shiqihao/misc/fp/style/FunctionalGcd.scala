@@ -1,5 +1,4 @@
-package fp.style
-
+package xyz.shiqihao.misc.fp.style
 
 object FunctionalGcd extends App {
   // imperative

@@ -1,4 +1,4 @@
-package fp.style
+package xyz.shiqihao.misc.fp.style
 
 object SideEffect {
   def main(args: Array[String]): Unit = {

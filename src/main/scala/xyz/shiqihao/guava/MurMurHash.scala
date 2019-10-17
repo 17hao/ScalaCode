@@ -13,14 +13,9 @@ object MurMurHash extends App {
       .hash().asInt() % 100
   }
 
-  //val hashId = Hashing.murmur3_128()
-  //  .newHasher()
-  //  .putString("6543", Charsets.UTF_8)
-  //  .hash().asInt() % 100
-  //print(hashId)
   def random = {
     (new Random().nextInt(100) % 100).toString
   }
 
-  1 to 100 foreach (_ => println(Math.abs(buckId(random))))
+  print(Math.abs(buckId("1f27c8ca-d57d-38f3-b1f8-dd6a5dc9e2c7")) % 100)
 }

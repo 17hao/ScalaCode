@@ -1,4 +1,4 @@
-package chapter10
+package xyz.shiqihao.ProgInScala.chapter10
 
 /*
   字符串图案，只有单一的一行

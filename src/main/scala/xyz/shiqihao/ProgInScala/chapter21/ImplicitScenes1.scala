@@ -1,4 +1,4 @@
-package chapter21
+package xyz.shiqihao.ProgInScala.chapter21
 
 object ImplicitScenes1 extends App {
   /*

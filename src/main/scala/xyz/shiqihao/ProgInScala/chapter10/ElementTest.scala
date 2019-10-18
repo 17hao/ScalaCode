@@ -1,4 +1,4 @@
-package chapter10
+package xyz.shiqihao.ProgInScala.chapter10
 
 object ElementTest extends App {
   val arrayElement1 = new ArrayElement(Array("***hello", "hello***"))

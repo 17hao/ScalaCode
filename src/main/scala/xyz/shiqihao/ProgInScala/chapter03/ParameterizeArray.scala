@@ -1,4 +1,4 @@
-package chapter03
+package xyz.shiqihao.ProgInScala.chapter03
 
 object ParameterizeArray {
   def main(args: Array[String]): Unit = {

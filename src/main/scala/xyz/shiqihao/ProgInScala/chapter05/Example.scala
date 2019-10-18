@@ -1,4 +1,4 @@
-package chapter05
+package xyz.shiqihao.ProgInScala.chapter05
 
 object Example {
   def main(args: Array[String]): Unit = {

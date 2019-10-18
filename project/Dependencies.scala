@@ -10,10 +10,11 @@ object Dependencies {
   val grpcStub = "io.grpc" % "grpc-stub" % "1.23.0"
   val grpcNetty = "io.grpc" % "grpc-netty-shaded" % "1.23.0"
   val test = "org.scalatest" %% "scalatest" % "3.0.5"
+  val guice = "com.google.inject" % "guice" % "4.2.2"
 
   // Projects
   val dependencies: Seq[ModuleID] =
     Seq(
-      rediscala, gson, akkaActor, kafka, protobuf, grpcStub, grpcNetty, test
+      rediscala, gson, akkaActor, kafka, protobuf, grpcStub, grpcNetty, test, guice
     )
 }

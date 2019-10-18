@@ -1,4 +1,4 @@
-package chapter10
+package xyz.shiqihao.ProgInScala.chapter10
 
 /*
   指定长和宽，由单一字符组成的二维图案

@@ -1,4 +1,4 @@
-package chapter03
+package xyz.shiqihao.ProgInScala.chapter03
 
 object UseOfTuple {
   def main(args: Array[String]): Unit = {

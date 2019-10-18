@@ -1,4 +1,4 @@
-package chapter08
+package xyz.shiqihao.ProgInScala.chapter08
 
 object PartiallyApplyedFunc {
   def main(args: Array[String]): Unit = {

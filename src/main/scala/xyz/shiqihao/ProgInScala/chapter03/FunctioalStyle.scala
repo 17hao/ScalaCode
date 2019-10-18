@@ -1,4 +1,4 @@
-//package chapter3
+package xyz.shiqihao.ProgInScala.chapter03
 
 object FunctioalStyle {
   def main(args: Array[String]): Unit = {

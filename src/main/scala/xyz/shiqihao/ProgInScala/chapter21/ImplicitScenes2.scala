@@ -1,6 +1,6 @@
-package chapter21
+package xyz.shiqihao.ProgInScala.chapter21
 
-import chapter06.Rational
+import xyz.shiqihao.ProgInScala.chapter06.Rational
 
 object ImplicitScenes2 extends App {
   /*

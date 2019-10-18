@@ -1,4 +1,4 @@
-package chapter04
+package xyz.shiqihao.ProgInScala.chapter04
 
 class ChecksumAccumulator {
   private var sum = 0

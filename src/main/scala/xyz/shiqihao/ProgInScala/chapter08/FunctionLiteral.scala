@@ -1,4 +1,4 @@
-package chapter08
+package xyz.shiqihao.ProgInScala.chapter08
 
 object FunctionLiteral extends App {
   /*

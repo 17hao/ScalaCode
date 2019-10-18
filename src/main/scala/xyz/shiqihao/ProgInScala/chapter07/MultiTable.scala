@@ -1,4 +1,4 @@
-package chapter07
+package xyz.shiqihao.ProgInScala.chapter07
 
 import scala.collection.immutable
 

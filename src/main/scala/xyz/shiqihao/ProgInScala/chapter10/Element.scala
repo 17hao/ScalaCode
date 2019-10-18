@@ -1,6 +1,6 @@
-package chapter10
+package xyz.shiqihao.ProgInScala.chapter10
 
-import chapter10.Element.elem
+import xyz.shiqihao.ProgInScala.chapter10.Element.elem
 
 abstract class Element {
   /*

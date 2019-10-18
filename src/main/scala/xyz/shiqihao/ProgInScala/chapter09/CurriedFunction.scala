@@ -1,4 +1,4 @@
-package chapter09
+package xyz.shiqihao.ProgInScala.chapter09
 
 object CurriedFunction extends App {
   // an expression

@@ -1,4 +1,4 @@
-package main.scala.programinscala.chapter23
+package xyz.shiqihao.ProgInScala.chapter23
 
 object ForExpression01 extends App {
   val lara = Person("lara", false)

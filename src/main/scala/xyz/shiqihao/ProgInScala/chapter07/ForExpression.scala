@@ -1,4 +1,4 @@
-package chapter07
+package xyz.shiqihao.ProgInScala.chapter07
 
 object ForExpression {
   def main(args: Array[String]): Unit = {

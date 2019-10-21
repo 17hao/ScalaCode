@@ -2,7 +2,6 @@ package xyz.shiqihao.KafkaClient
 
 import java.util
 import java.util.Properties
-import java.util.concurrent.TimeUnit
 
 import org.apache.kafka.clients.consumer.KafkaConsumer
 
@@ -18,5 +17,4 @@ object StrConsumer extends App {
     val records = consumer.poll(100)
     records.forEach(record => println(s"key is: ${record.key}; value is: ${record.value()}"))
   }
-  consumer.close(1000, TimeUnit.MILLISECONDS)
 }

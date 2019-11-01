@@ -1,4 +1,4 @@
-package xyz.shiqihao.misc.fp.hof
+package xyz.shiqihao.misc.fp.HOF
 
 object PartialFunc extends App {
   def partial[A](a: A)(f: A => A): A = f(a)

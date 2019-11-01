@@ -1,4 +1,4 @@
-package xyz.shiqihao.misc.fp.hof
+package xyz.shiqihao.misc.fp.HOF
 
 object Currying extends App {
   /**

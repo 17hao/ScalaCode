@@ -1,17 +1,9 @@
 *.class
-
 *.log
 .idea
 LearnProject/*
-out
 *.iml
-
-# Play application
 .g8
-grandle/
-*.grandle
 logs
 target
-build.grandle
-grandlew*
 .DS_Store

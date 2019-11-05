@@ -1,4 +1,4 @@
-package xyz.shiqihao.misc.fp.hof
+package xyz.shiqihao.misc.fp.HOF
 
 object AnonymousFunc extends App {
   def anonymous(a: Int, f: Int => Int): Int = {

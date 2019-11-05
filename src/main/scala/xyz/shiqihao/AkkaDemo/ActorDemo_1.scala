@@ -17,13 +17,13 @@ class ActorDemo_1 extends Actor with ActorLogging {
   }
 }
 
-object Demo {
+object ActorDemo_1 {
   def props: Props = Props[ActorDemo_1](new ActorDemo_1())
 }
 
-object Starter extends App {
+object DemoMain extends App {
   val context = ActorSystem.create("test")
-  val demo = context.actorOf(Demo.props)
+  val demo = context.actorOf(ActorDemo_1.props)
   demo ! "test"
   demo ! 1
 }

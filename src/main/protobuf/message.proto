@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "xyz.shiqihao.proto";
+option java_outer_classname = "MessageProto";
+
+message Message {
+    message UserInfo {
+        repeated string value = 1;
+    }
+    repeated UserInfo user_info = 1;
+    string provider_key = 2;
+    string provider_value = 3;
+}

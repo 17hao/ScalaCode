@@ -1,7 +1,6 @@
 *.class
 *.log
 .idea
-LearnProject/*
 *.iml
 .g8
 logs

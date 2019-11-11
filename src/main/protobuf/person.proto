@@ -2,8 +2,8 @@ syntax = "proto3";
 
 package protobuf;
 
-option java_package = "xyz.shiqihao.proto";
-option java_outer_classname = "PersonProto";
+option java_package = "xyz.shiqihao.misc.protobuf";
+option java_outer_classname = "ProtobufPerson";
 
 message Person {
     string name = 1;

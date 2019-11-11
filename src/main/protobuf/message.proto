@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package protobuf;
 
-option java_package = "xyz.shiqihao.proto";
+option java_package = "xyz.shiqihao.misc.protobuf";
 option java_outer_classname = "ProtobufMessage";
 
 message Message {

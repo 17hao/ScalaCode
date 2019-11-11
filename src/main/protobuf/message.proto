@@ -3,13 +3,21 @@ syntax = "proto3";
 package protobuf;
 
 option java_package = "xyz.shiqihao.proto";
-option java_outer_classname = "MessageProto";
+option java_outer_classname = "ProtobufMessage";
 
 message Message {
     message UserInfo {
         repeated string value = 1;
     }
     repeated UserInfo user_info = 1;
-    string provider_key = 2;
-    string provider_value = 3;
+    enum SmsProvider {
+        ALIYUN = 0;
+        YUNPIAN = 1;
+    }
+    SmsProvider sms_provider = 2;
+    string provider_key = 3;
+    string provider_value = 4;
+    string sign_name = 5;
+    string template_code = 6;
+    string template_content = 7;
 }

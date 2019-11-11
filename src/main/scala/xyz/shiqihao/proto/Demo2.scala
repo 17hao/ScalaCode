@@ -2,24 +2,32 @@ package xyz.shiqihao.proto
 
 import scala.collection.JavaConverters._
 
-class Demo2 {
-  def setValue(): MessageProto.Message = {
+object Main extends App {
+
+  def initial(): ProtobufMessage.Message = {
     val infoList = List(UserInfo(Seq("15968912980", "sqh")), UserInfo(Seq("15868170425", "lyj")))
-    val r = infoList.map { i =>
-      MessageProto.Message.UserInfo.newBuilder().addAllValue(i.seq.asJava).build()
+    val temp = infoList.map { i =>
+      ProtobufMessage.Message.UserInfo.newBuilder().addAllValue(i.seq.asJava).build()
     }
-    MessageProto.Message.newBuilder()
+    ProtobufMessage.Message.newBuilder()
       .setProviderKey("key")
-      //.setProviderValue("value")
-      .addAllUserInfo(r.asJava)
+      .setProviderValue("value")
+      .setSignName("signName")
+      .setTemplateCode("SMS-123")
+      .setSmsProvider(ProtobufMessage.Message.SmsProvider.ALIYUN)
+      .addAllUserInfo(temp.asJava)
       .build()
   }
-}
 
+  def getProvider: String = {
+    initial().getSmsProvider match {
+      case ProtobufMessage.Message.SmsProvider.ALIYUN => "aliyun"
+      case _ => "other"
+    }
+  }
 
-object Main extends App {
-  val d = new Demo2
-  println(d.setValue())
+  println(getProvider)
+  println(initial().getUserInfoList.asScala.map(_.getValueList.asScala.head))
 }
 
 final case class UserInfo(seq: Seq[String])

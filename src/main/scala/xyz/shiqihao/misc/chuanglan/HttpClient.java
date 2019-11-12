@@ -37,6 +37,6 @@ class HttpClient {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return null;
+        return "send failed";
     }
 }

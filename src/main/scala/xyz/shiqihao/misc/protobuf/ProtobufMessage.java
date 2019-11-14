@@ -19,87 +19,172 @@ public final class ProtobufMessage {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .protobuf.Message.UserInfo user_info = 1;</code>
+     * <code>string id = 1;</code>
      */
-    java.util.List<xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo> 
-        getUserInfoList();
+    java.lang.String getId();
     /**
-     * <code>repeated .protobuf.Message.UserInfo user_info = 1;</code>
-     */
-    xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo getUserInfo(int index);
-    /**
-     * <code>repeated .protobuf.Message.UserInfo user_info = 1;</code>
-     */
-    int getUserInfoCount();
-    /**
-     * <code>repeated .protobuf.Message.UserInfo user_info = 1;</code>
-     */
-    java.util.List<? extends xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfoOrBuilder> 
-        getUserInfoOrBuilderList();
-    /**
-     * <code>repeated .protobuf.Message.UserInfo user_info = 1;</code>
-     */
-    xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfoOrBuilder getUserInfoOrBuilder(
-        int index);
-
-    /**
-     * <code>.protobuf.Message.SmsProvider sms_provider = 2;</code>
-     */
-    int getSmsProviderValue();
-    /**
-     * <code>.protobuf.Message.SmsProvider sms_provider = 2;</code>
-     */
-    xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.SmsProvider getSmsProvider();
-
-    /**
-     * <code>string provider_key = 3;</code>
-     */
-    java.lang.String getProviderKey();
-    /**
-     * <code>string provider_key = 3;</code>
+     * <code>string id = 1;</code>
      */
     com.google.protobuf.ByteString
-        getProviderKeyBytes();
+        getIdBytes();
 
     /**
-     * <code>string provider_value = 4;</code>
-     */
-    java.lang.String getProviderValue();
-    /**
-     * <code>string provider_value = 4;</code>
-     */
-    com.google.protobuf.ByteString
-        getProviderValueBytes();
-
-    /**
-     * <code>string sign_name = 5;</code>
+     * <code>string sign_name = 2;</code>
      */
     java.lang.String getSignName();
     /**
-     * <code>string sign_name = 5;</code>
+     * <code>string sign_name = 2;</code>
      */
     com.google.protobuf.ByteString
         getSignNameBytes();
 
     /**
-     * <code>string template_code = 6;</code>
+     * <code>repeated string template = 3;</code>
      */
-    java.lang.String getTemplateCode();
+    java.util.List<java.lang.String>
+        getTemplateList();
     /**
-     * <code>string template_code = 6;</code>
+     * <code>repeated string template = 3;</code>
+     */
+    int getTemplateCount();
+    /**
+     * <code>repeated string template = 3;</code>
+     */
+    java.lang.String getTemplate(int index);
+    /**
+     * <code>repeated string template = 3;</code>
      */
     com.google.protobuf.ByteString
-        getTemplateCodeBytes();
+        getTemplateBytes(int index);
 
     /**
-     * <code>string template_content = 7;</code>
+     * <code>string receiver = 4;</code>
      */
-    java.lang.String getTemplateContent();
+    java.lang.String getReceiver();
     /**
-     * <code>string template_content = 7;</code>
+     * <code>string receiver = 4;</code>
      */
     com.google.protobuf.ByteString
-        getTemplateContentBytes();
+        getReceiverBytes();
+
+    /**
+     * <code>string areaCode = 5;</code>
+     */
+    java.lang.String getAreaCode();
+    /**
+     * <code>string areaCode = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getAreaCodeBytes();
+
+    /**
+     * <code>map&lt;string, string&gt; parameters = 6;</code>
+     */
+    int getParametersCount();
+    /**
+     * <code>map&lt;string, string&gt; parameters = 6;</code>
+     */
+    boolean containsParameters(
+        java.lang.String key);
+    /**
+     * Use {@link #getParametersMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getParameters();
+    /**
+     * <code>map&lt;string, string&gt; parameters = 6;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getParametersMap();
+    /**
+     * <code>map&lt;string, string&gt; parameters = 6;</code>
+     */
+
+    java.lang.String getParametersOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <code>map&lt;string, string&gt; parameters = 6;</code>
+     */
+
+    java.lang.String getParametersOrThrow(
+        java.lang.String key);
+
+    /**
+     * <code>int64 created = 7;</code>
+     */
+    long getCreated();
+
+    /**
+     * <code>int32 expires = 8;</code>
+     */
+    int getExpires();
+
+    /**
+     * <code>.protobuf.Message.SmsProvider sms_provider = 9;</code>
+     */
+    int getSmsProviderValue();
+    /**
+     * <code>.protobuf.Message.SmsProvider sms_provider = 9;</code>
+     */
+    xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.SmsProvider getSmsProvider();
+
+    /**
+     * <code>string provider_key = 10;</code>
+     */
+    java.lang.String getProviderKey();
+    /**
+     * <code>string provider_key = 10;</code>
+     */
+    com.google.protobuf.ByteString
+        getProviderKeyBytes();
+
+    /**
+     * <code>string provider_value = 12;</code>
+     */
+    java.lang.String getProviderValue();
+    /**
+     * <code>string provider_value = 12;</code>
+     */
+    com.google.protobuf.ByteString
+        getProviderValueBytes();
+
+    /**
+     * <pre>
+     * 请求供应商的地址,部分厂商需要设置.
+     * </pre>
+     *
+     * <code>string send_path = 13;</code>
+     */
+    java.lang.String getSendPath();
+    /**
+     * <pre>
+     * 请求供应商的地址,部分厂商需要设置.
+     * </pre>
+     *
+     * <code>string send_path = 13;</code>
+     */
+    com.google.protobuf.ByteString
+        getSendPathBytes();
+
+    /**
+     * <pre>
+     * 短信模板中的变量,部分厂商需要
+     * </pre>
+     *
+     * <code>string template_param = 14;</code>
+     */
+    java.lang.String getTemplateParam();
+    /**
+     * <pre>
+     * 短信模板中的变量,部分厂商需要
+     * </pre>
+     *
+     * <code>string template_param = 14;</code>
+     */
+    com.google.protobuf.ByteString
+        getTemplateParamBytes();
   }
   /**
    * Protobuf type {@code protobuf.Message}
@@ -114,13 +199,16 @@ public final class ProtobufMessage {
       super(builder);
     }
     private Message() {
-      userInfo_ = java.util.Collections.emptyList();
+      id_ = "";
+      signName_ = "";
+      template_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      receiver_ = "";
+      areaCode_ = "";
       smsProvider_ = 0;
       providerKey_ = "";
       providerValue_ = "";
-      signName_ = "";
-      templateCode_ = "";
-      templateContent_ = "";
+      sendPath_ = "";
+      templateParam_ = "";
     }
 
     @java.lang.Override
@@ -148,48 +236,89 @@ public final class ProtobufMessage {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                userInfo_ = new java.util.ArrayList<xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              userInfo_.add(
-                  input.readMessage(xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo.parser(), extensionRegistry));
-              break;
-            }
-            case 16: {
-              int rawValue = input.readEnum();
-
-              smsProvider_ = rawValue;
-              break;
-            }
-            case 26: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              providerKey_ = s;
+              id_ = s;
               break;
             }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              providerValue_ = s;
-              break;
-            }
-            case 42: {
+            case 18: {
               java.lang.String s = input.readStringRequireUtf8();
 
               signName_ = s;
               break;
             }
-            case 50: {
+            case 26: {
               java.lang.String s = input.readStringRequireUtf8();
-
-              templateCode_ = s;
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                template_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              template_.add(s);
               break;
             }
-            case 58: {
+            case 34: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              templateContent_ = s;
+              receiver_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              areaCode_ = s;
+              break;
+            }
+            case 50: {
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
+                parameters_ = com.google.protobuf.MapField.newMapField(
+                    ParametersDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000020;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              parameters__ = input.readMessage(
+                  ParametersDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              parameters_.getMutableMap().put(
+                  parameters__.getKey(), parameters__.getValue());
+              break;
+            }
+            case 56: {
+
+              created_ = input.readInt64();
+              break;
+            }
+            case 64: {
+
+              expires_ = input.readInt32();
+              break;
+            }
+            case 72: {
+              int rawValue = input.readEnum();
+
+              smsProvider_ = rawValue;
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              providerKey_ = s;
+              break;
+            }
+            case 98: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              providerValue_ = s;
+              break;
+            }
+            case 106: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              sendPath_ = s;
+              break;
+            }
+            case 114: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              templateParam_ = s;
               break;
             }
             default: {
@@ -207,8 +336,8 @@ public final class ProtobufMessage {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          userInfo_ = java.util.Collections.unmodifiableList(userInfo_);
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          template_ = template_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -219,6 +348,18 @@ public final class ProtobufMessage {
       return xyz.shiqihao.misc.protobuf.ProtobufMessage.internal_static_protobuf_Message_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 6:
+          return internalGetParameters();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -240,6 +381,10 @@ public final class ProtobufMessage {
        * <code>YUNPIAN = 1;</code>
        */
       YUNPIAN(1),
+      /**
+       * <code>CHUANGLAN = 2;</code>
+       */
+      CHUANGLAN(2),
       UNRECOGNIZED(-1),
       ;
 
@@ -251,6 +396,10 @@ public final class ProtobufMessage {
        * <code>YUNPIAN = 1;</code>
        */
       public static final int YUNPIAN_VALUE = 1;
+      /**
+       * <code>CHUANGLAN = 2;</code>
+       */
+      public static final int CHUANGLAN_VALUE = 2;
 
 
       public final int getNumber() {
@@ -273,6 +422,7 @@ public final class ProtobufMessage {
         switch (value) {
           case 0: return ALIYUN;
           case 1: return YUNPIAN;
+          case 2: return CHUANGLAN;
           default: return null;
         }
       }
@@ -325,734 +475,45 @@ public final class ProtobufMessage {
       // @@protoc_insertion_point(enum_scope:protobuf.Message.SmsProvider)
     }
 
-    public interface UserInfoOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:protobuf.Message.UserInfo)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <code>repeated string value = 1;</code>
-       */
-      java.util.List<java.lang.String>
-          getValueList();
-      /**
-       * <code>repeated string value = 1;</code>
-       */
-      int getValueCount();
-      /**
-       * <code>repeated string value = 1;</code>
-       */
-      java.lang.String getValue(int index);
-      /**
-       * <code>repeated string value = 1;</code>
-       */
-      com.google.protobuf.ByteString
-          getValueBytes(int index);
-    }
-    /**
-     * Protobuf type {@code protobuf.Message.UserInfo}
-     */
-    public  static final class UserInfo extends
-        com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:protobuf.Message.UserInfo)
-        UserInfoOrBuilder {
-    private static final long serialVersionUID = 0L;
-      // Use UserInfo.newBuilder() to construct.
-      private UserInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-        super(builder);
-      }
-      private UserInfo() {
-        value_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      }
-
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
-      private UserInfo(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                java.lang.String s = input.readStringRequireUtf8();
-                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                  value_ = new com.google.protobuf.LazyStringArrayList();
-                  mutable_bitField0_ |= 0x00000001;
-                }
-                value_.add(s);
-                break;
-              }
-              default: {
-                if (!parseUnknownField(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          if (((mutable_bitField0_ & 0x00000001) != 0)) {
-            value_ = value_.getUnmodifiableView();
-          }
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return xyz.shiqihao.misc.protobuf.ProtobufMessage.internal_static_protobuf_Message_UserInfo_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return xyz.shiqihao.misc.protobuf.ProtobufMessage.internal_static_protobuf_Message_UserInfo_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo.class, xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo.Builder.class);
-      }
-
-      public static final int VALUE_FIELD_NUMBER = 1;
-      private com.google.protobuf.LazyStringList value_;
-      /**
-       * <code>repeated string value = 1;</code>
-       */
-      public com.google.protobuf.ProtocolStringList
-          getValueList() {
-        return value_;
-      }
-      /**
-       * <code>repeated string value = 1;</code>
-       */
-      public int getValueCount() {
-        return value_.size();
-      }
-      /**
-       * <code>repeated string value = 1;</code>
-       */
-      public java.lang.String getValue(int index) {
-        return value_.get(index);
-      }
-      /**
-       * <code>repeated string value = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getValueBytes(int index) {
-        return value_.getByteString(index);
-      }
-
-      private byte memoizedIsInitialized = -1;
-      @java.lang.Override
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      @java.lang.Override
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        for (int i = 0; i < value_.size(); i++) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, value_.getRaw(i));
-        }
-        unknownFields.writeTo(output);
-      }
-
-      @java.lang.Override
-      public int getSerializedSize() {
-        int size = memoizedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        {
-          int dataSize = 0;
-          for (int i = 0; i < value_.size(); i++) {
-            dataSize += computeStringSizeNoTag(value_.getRaw(i));
-          }
-          size += dataSize;
-          size += 1 * getValueList().size();
-        }
-        size += unknownFields.getSerializedSize();
-        memoizedSize = size;
-        return size;
-      }
-
-      @java.lang.Override
-      public boolean equals(final java.lang.Object obj) {
-        if (obj == this) {
-         return true;
-        }
-        if (!(obj instanceof xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo)) {
-          return super.equals(obj);
-        }
-        xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo other = (xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo) obj;
-
-        if (!getValueList()
-            .equals(other.getValueList())) return false;
-        if (!unknownFields.equals(other.unknownFields)) return false;
-        return true;
-      }
-
-      @java.lang.Override
-      public int hashCode() {
-        if (memoizedHashCode != 0) {
-          return memoizedHashCode;
-        }
-        int hash = 41;
-        hash = (19 * hash) + getDescriptor().hashCode();
-        if (getValueCount() > 0) {
-          hash = (37 * hash) + VALUE_FIELD_NUMBER;
-          hash = (53 * hash) + getValueList().hashCode();
-        }
-        hash = (29 * hash) + unknownFields.hashCode();
-        memoizedHashCode = hash;
-        return hash;
-      }
-
-      public static xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo parseFrom(
-          java.nio.ByteBuffer data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo parseFrom(
-          java.nio.ByteBuffer data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input);
-      }
-      public static xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-
-      @java.lang.Override
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
-      }
-      public static Builder newBuilder(xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo prototype) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-      }
-      @java.lang.Override
-      public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE
-            ? new Builder() : new Builder().mergeFrom(this);
-      }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * Protobuf type {@code protobuf.Message.UserInfo}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:protobuf.Message.UserInfo)
-          xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfoOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return xyz.shiqihao.misc.protobuf.ProtobufMessage.internal_static_protobuf_Message_UserInfo_descriptor;
-        }
-
-        @java.lang.Override
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return xyz.shiqihao.misc.protobuf.ProtobufMessage.internal_static_protobuf_Message_UserInfo_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo.class, xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo.Builder.class);
-        }
-
-        // Construct using xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-          }
-        }
-        @java.lang.Override
-        public Builder clear() {
-          super.clear();
-          value_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-          bitField0_ = (bitField0_ & ~0x00000001);
-          return this;
-        }
-
-        @java.lang.Override
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return xyz.shiqihao.misc.protobuf.ProtobufMessage.internal_static_protobuf_Message_UserInfo_descriptor;
-        }
-
-        @java.lang.Override
-        public xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo getDefaultInstanceForType() {
-          return xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo.getDefaultInstance();
-        }
-
-        @java.lang.Override
-        public xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo build() {
-          xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        @java.lang.Override
-        public xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo buildPartial() {
-          xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo result = new xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo(this);
-          int from_bitField0_ = bitField0_;
-          if (((bitField0_ & 0x00000001) != 0)) {
-            value_ = value_.getUnmodifiableView();
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.value_ = value_;
-          onBuilt();
-          return result;
-        }
-
-        @java.lang.Override
-        public Builder clone() {
-          return super.clone();
-        }
-        @java.lang.Override
-        public Builder setField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return super.setField(field, value);
-        }
-        @java.lang.Override
-        public Builder clearField(
-            com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return super.clearField(field);
-        }
-        @java.lang.Override
-        public Builder clearOneof(
-            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return super.clearOneof(oneof);
-        }
-        @java.lang.Override
-        public Builder setRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            int index, java.lang.Object value) {
-          return super.setRepeatedField(field, index, value);
-        }
-        @java.lang.Override
-        public Builder addRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return super.addRepeatedField(field, value);
-        }
-        @java.lang.Override
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo) {
-            return mergeFrom((xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo other) {
-          if (other == xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo.getDefaultInstance()) return this;
-          if (!other.value_.isEmpty()) {
-            if (value_.isEmpty()) {
-              value_ = other.value_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureValueIsMutable();
-              value_.addAll(other.value_);
-            }
-            onChanged();
-          }
-          this.mergeUnknownFields(other.unknownFields);
-          onChanged();
-          return this;
-        }
-
-        @java.lang.Override
-        public final boolean isInitialized() {
-          return true;
-        }
-
-        @java.lang.Override
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo) e.getUnfinishedMessage();
-            throw e.unwrapIOException();
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-        private int bitField0_;
-
-        private com.google.protobuf.LazyStringList value_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        private void ensureValueIsMutable() {
-          if (!((bitField0_ & 0x00000001) != 0)) {
-            value_ = new com.google.protobuf.LazyStringArrayList(value_);
-            bitField0_ |= 0x00000001;
-           }
-        }
-        /**
-         * <code>repeated string value = 1;</code>
-         */
-        public com.google.protobuf.ProtocolStringList
-            getValueList() {
-          return value_.getUnmodifiableView();
-        }
-        /**
-         * <code>repeated string value = 1;</code>
-         */
-        public int getValueCount() {
-          return value_.size();
-        }
-        /**
-         * <code>repeated string value = 1;</code>
-         */
-        public java.lang.String getValue(int index) {
-          return value_.get(index);
-        }
-        /**
-         * <code>repeated string value = 1;</code>
-         */
-        public com.google.protobuf.ByteString
-            getValueBytes(int index) {
-          return value_.getByteString(index);
-        }
-        /**
-         * <code>repeated string value = 1;</code>
-         */
-        public Builder setValue(
-            int index, java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureValueIsMutable();
-          value_.set(index, value);
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>repeated string value = 1;</code>
-         */
-        public Builder addValue(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureValueIsMutable();
-          value_.add(value);
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>repeated string value = 1;</code>
-         */
-        public Builder addAllValue(
-            java.lang.Iterable<java.lang.String> values) {
-          ensureValueIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, value_);
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>repeated string value = 1;</code>
-         */
-        public Builder clearValue() {
-          value_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>repeated string value = 1;</code>
-         */
-        public Builder addValueBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          ensureValueIsMutable();
-          value_.add(value);
-          onChanged();
-          return this;
-        }
-        @java.lang.Override
-        public final Builder setUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFields(unknownFields);
-        }
-
-        @java.lang.Override
-        public final Builder mergeUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.mergeUnknownFields(unknownFields);
-        }
-
-
-        // @@protoc_insertion_point(builder_scope:protobuf.Message.UserInfo)
-      }
-
-      // @@protoc_insertion_point(class_scope:protobuf.Message.UserInfo)
-      private static final xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo DEFAULT_INSTANCE;
-      static {
-        DEFAULT_INSTANCE = new xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo();
-      }
-
-      public static xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo getDefaultInstance() {
-        return DEFAULT_INSTANCE;
-      }
-
-      private static final com.google.protobuf.Parser<UserInfo>
-          PARSER = new com.google.protobuf.AbstractParser<UserInfo>() {
-        @java.lang.Override
-        public UserInfo parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new UserInfo(input, extensionRegistry);
-        }
-      };
-
-      public static com.google.protobuf.Parser<UserInfo> parser() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<UserInfo> getParserForType() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
-      }
-
-    }
-
     private int bitField0_;
-    public static final int USER_INFO_FIELD_NUMBER = 1;
-    private java.util.List<xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo> userInfo_;
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
     /**
-     * <code>repeated .protobuf.Message.UserInfo user_info = 1;</code>
+     * <code>string id = 1;</code>
      */
-    public java.util.List<xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo> getUserInfoList() {
-      return userInfo_;
-    }
-    /**
-     * <code>repeated .protobuf.Message.UserInfo user_info = 1;</code>
-     */
-    public java.util.List<? extends xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfoOrBuilder> 
-        getUserInfoOrBuilderList() {
-      return userInfo_;
-    }
-    /**
-     * <code>repeated .protobuf.Message.UserInfo user_info = 1;</code>
-     */
-    public int getUserInfoCount() {
-      return userInfo_.size();
-    }
-    /**
-     * <code>repeated .protobuf.Message.UserInfo user_info = 1;</code>
-     */
-    public xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo getUserInfo(int index) {
-      return userInfo_.get(index);
-    }
-    /**
-     * <code>repeated .protobuf.Message.UserInfo user_info = 1;</code>
-     */
-    public xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfoOrBuilder getUserInfoOrBuilder(
-        int index) {
-      return userInfo_.get(index);
-    }
-
-    public static final int SMS_PROVIDER_FIELD_NUMBER = 2;
-    private int smsProvider_;
-    /**
-     * <code>.protobuf.Message.SmsProvider sms_provider = 2;</code>
-     */
-    public int getSmsProviderValue() {
-      return smsProvider_;
-    }
-    /**
-     * <code>.protobuf.Message.SmsProvider sms_provider = 2;</code>
-     */
-    public xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.SmsProvider getSmsProvider() {
-      @SuppressWarnings("deprecation")
-      xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.SmsProvider result = xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.SmsProvider.valueOf(smsProvider_);
-      return result == null ? xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.SmsProvider.UNRECOGNIZED : result;
-    }
-
-    public static final int PROVIDER_KEY_FIELD_NUMBER = 3;
-    private volatile java.lang.Object providerKey_;
-    /**
-     * <code>string provider_key = 3;</code>
-     */
-    public java.lang.String getProviderKey() {
-      java.lang.Object ref = providerKey_;
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        providerKey_ = s;
+        id_ = s;
         return s;
       }
     }
     /**
-     * <code>string provider_key = 3;</code>
+     * <code>string id = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getProviderKeyBytes() {
-      java.lang.Object ref = providerKey_;
+        getIdBytes() {
+      java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        providerKey_ = b;
+        id_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    public static final int PROVIDER_VALUE_FIELD_NUMBER = 4;
-    private volatile java.lang.Object providerValue_;
-    /**
-     * <code>string provider_value = 4;</code>
-     */
-    public java.lang.String getProviderValue() {
-      java.lang.Object ref = providerValue_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        providerValue_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string provider_value = 4;</code>
-     */
-    public com.google.protobuf.ByteString
-        getProviderValueBytes() {
-      java.lang.Object ref = providerValue_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        providerValue_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int SIGN_NAME_FIELD_NUMBER = 5;
+    public static final int SIGN_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object signName_;
     /**
-     * <code>string sign_name = 5;</code>
+     * <code>string sign_name = 2;</code>
      */
     public java.lang.String getSignName() {
       java.lang.Object ref = signName_;
@@ -1067,7 +528,7 @@ public final class ProtobufMessage {
       }
     }
     /**
-     * <code>string sign_name = 5;</code>
+     * <code>string sign_name = 2;</code>
      */
     public com.google.protobuf.ByteString
         getSignNameBytes() {
@@ -1083,68 +544,360 @@ public final class ProtobufMessage {
       }
     }
 
-    public static final int TEMPLATE_CODE_FIELD_NUMBER = 6;
-    private volatile java.lang.Object templateCode_;
+    public static final int TEMPLATE_FIELD_NUMBER = 3;
+    private com.google.protobuf.LazyStringList template_;
     /**
-     * <code>string template_code = 6;</code>
+     * <code>repeated string template = 3;</code>
      */
-    public java.lang.String getTemplateCode() {
-      java.lang.Object ref = templateCode_;
+    public com.google.protobuf.ProtocolStringList
+        getTemplateList() {
+      return template_;
+    }
+    /**
+     * <code>repeated string template = 3;</code>
+     */
+    public int getTemplateCount() {
+      return template_.size();
+    }
+    /**
+     * <code>repeated string template = 3;</code>
+     */
+    public java.lang.String getTemplate(int index) {
+      return template_.get(index);
+    }
+    /**
+     * <code>repeated string template = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTemplateBytes(int index) {
+      return template_.getByteString(index);
+    }
+
+    public static final int RECEIVER_FIELD_NUMBER = 4;
+    private volatile java.lang.Object receiver_;
+    /**
+     * <code>string receiver = 4;</code>
+     */
+    public java.lang.String getReceiver() {
+      java.lang.Object ref = receiver_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        templateCode_ = s;
+        receiver_ = s;
         return s;
       }
     }
     /**
-     * <code>string template_code = 6;</code>
+     * <code>string receiver = 4;</code>
      */
     public com.google.protobuf.ByteString
-        getTemplateCodeBytes() {
-      java.lang.Object ref = templateCode_;
+        getReceiverBytes() {
+      java.lang.Object ref = receiver_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        templateCode_ = b;
+        receiver_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    public static final int TEMPLATE_CONTENT_FIELD_NUMBER = 7;
-    private volatile java.lang.Object templateContent_;
+    public static final int AREACODE_FIELD_NUMBER = 5;
+    private volatile java.lang.Object areaCode_;
     /**
-     * <code>string template_content = 7;</code>
+     * <code>string areaCode = 5;</code>
      */
-    public java.lang.String getTemplateContent() {
-      java.lang.Object ref = templateContent_;
+    public java.lang.String getAreaCode() {
+      java.lang.Object ref = areaCode_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        templateContent_ = s;
+        areaCode_ = s;
         return s;
       }
     }
     /**
-     * <code>string template_content = 7;</code>
+     * <code>string areaCode = 5;</code>
      */
     public com.google.protobuf.ByteString
-        getTemplateContentBytes() {
-      java.lang.Object ref = templateContent_;
+        getAreaCodeBytes() {
+      java.lang.Object ref = areaCode_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        templateContent_ = b;
+        areaCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PARAMETERS_FIELD_NUMBER = 6;
+    private static final class ParametersDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  xyz.shiqihao.misc.protobuf.ProtobufMessage.internal_static_protobuf_Message_ParametersEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> parameters_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetParameters() {
+      if (parameters_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            ParametersDefaultEntryHolder.defaultEntry);
+      }
+      return parameters_;
+    }
+
+    public int getParametersCount() {
+      return internalGetParameters().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, string&gt; parameters = 6;</code>
+     */
+
+    public boolean containsParameters(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetParameters().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getParametersMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getParameters() {
+      return getParametersMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; parameters = 6;</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.String> getParametersMap() {
+      return internalGetParameters().getMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; parameters = 6;</code>
+     */
+
+    public java.lang.String getParametersOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetParameters().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, string&gt; parameters = 6;</code>
+     */
+
+    public java.lang.String getParametersOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetParameters().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int CREATED_FIELD_NUMBER = 7;
+    private long created_;
+    /**
+     * <code>int64 created = 7;</code>
+     */
+    public long getCreated() {
+      return created_;
+    }
+
+    public static final int EXPIRES_FIELD_NUMBER = 8;
+    private int expires_;
+    /**
+     * <code>int32 expires = 8;</code>
+     */
+    public int getExpires() {
+      return expires_;
+    }
+
+    public static final int SMS_PROVIDER_FIELD_NUMBER = 9;
+    private int smsProvider_;
+    /**
+     * <code>.protobuf.Message.SmsProvider sms_provider = 9;</code>
+     */
+    public int getSmsProviderValue() {
+      return smsProvider_;
+    }
+    /**
+     * <code>.protobuf.Message.SmsProvider sms_provider = 9;</code>
+     */
+    public xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.SmsProvider getSmsProvider() {
+      @SuppressWarnings("deprecation")
+      xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.SmsProvider result = xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.SmsProvider.valueOf(smsProvider_);
+      return result == null ? xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.SmsProvider.UNRECOGNIZED : result;
+    }
+
+    public static final int PROVIDER_KEY_FIELD_NUMBER = 10;
+    private volatile java.lang.Object providerKey_;
+    /**
+     * <code>string provider_key = 10;</code>
+     */
+    public java.lang.String getProviderKey() {
+      java.lang.Object ref = providerKey_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        providerKey_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string provider_key = 10;</code>
+     */
+    public com.google.protobuf.ByteString
+        getProviderKeyBytes() {
+      java.lang.Object ref = providerKey_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        providerKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROVIDER_VALUE_FIELD_NUMBER = 12;
+    private volatile java.lang.Object providerValue_;
+    /**
+     * <code>string provider_value = 12;</code>
+     */
+    public java.lang.String getProviderValue() {
+      java.lang.Object ref = providerValue_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        providerValue_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string provider_value = 12;</code>
+     */
+    public com.google.protobuf.ByteString
+        getProviderValueBytes() {
+      java.lang.Object ref = providerValue_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        providerValue_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SEND_PATH_FIELD_NUMBER = 13;
+    private volatile java.lang.Object sendPath_;
+    /**
+     * <pre>
+     * 请求供应商的地址,部分厂商需要设置.
+     * </pre>
+     *
+     * <code>string send_path = 13;</code>
+     */
+    public java.lang.String getSendPath() {
+      java.lang.Object ref = sendPath_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sendPath_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 请求供应商的地址,部分厂商需要设置.
+     * </pre>
+     *
+     * <code>string send_path = 13;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSendPathBytes() {
+      java.lang.Object ref = sendPath_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sendPath_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TEMPLATE_PARAM_FIELD_NUMBER = 14;
+    private volatile java.lang.Object templateParam_;
+    /**
+     * <pre>
+     * 短信模板中的变量,部分厂商需要
+     * </pre>
+     *
+     * <code>string template_param = 14;</code>
+     */
+    public java.lang.String getTemplateParam() {
+      java.lang.Object ref = templateParam_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        templateParam_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 短信模板中的变量,部分厂商需要
+     * </pre>
+     *
+     * <code>string template_param = 14;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTemplateParamBytes() {
+      java.lang.Object ref = templateParam_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        templateParam_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -1165,26 +918,47 @@ public final class ProtobufMessage {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      for (int i = 0; i < userInfo_.size(); i++) {
-        output.writeMessage(1, userInfo_.get(i));
-      }
-      if (smsProvider_ != xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.SmsProvider.ALIYUN.getNumber()) {
-        output.writeEnum(2, smsProvider_);
-      }
-      if (!getProviderKeyBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, providerKey_);
-      }
-      if (!getProviderValueBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, providerValue_);
+      if (!getIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
       if (!getSignNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, signName_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, signName_);
       }
-      if (!getTemplateCodeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, templateCode_);
+      for (int i = 0; i < template_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, template_.getRaw(i));
       }
-      if (!getTemplateContentBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, templateContent_);
+      if (!getReceiverBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, receiver_);
+      }
+      if (!getAreaCodeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, areaCode_);
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetParameters(),
+          ParametersDefaultEntryHolder.defaultEntry,
+          6);
+      if (created_ != 0L) {
+        output.writeInt64(7, created_);
+      }
+      if (expires_ != 0) {
+        output.writeInt32(8, expires_);
+      }
+      if (smsProvider_ != xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.SmsProvider.ALIYUN.getNumber()) {
+        output.writeEnum(9, smsProvider_);
+      }
+      if (!getProviderKeyBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, providerKey_);
+      }
+      if (!getProviderValueBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, providerValue_);
+      }
+      if (!getSendPathBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, sendPath_);
+      }
+      if (!getTemplateParamBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, templateParam_);
       }
       unknownFields.writeTo(output);
     }
@@ -1195,28 +969,59 @@ public final class ProtobufMessage {
       if (size != -1) return size;
 
       size = 0;
-      for (int i = 0; i < userInfo_.size(); i++) {
+      if (!getIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!getSignNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, signName_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < template_.size(); i++) {
+          dataSize += computeStringSizeNoTag(template_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getTemplateList().size();
+      }
+      if (!getReceiverBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, receiver_);
+      }
+      if (!getAreaCodeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, areaCode_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetParameters().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        parameters__ = ParametersDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, userInfo_.get(i));
+            .computeMessageSize(6, parameters__);
+      }
+      if (created_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(7, created_);
+      }
+      if (expires_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(8, expires_);
       }
       if (smsProvider_ != xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.SmsProvider.ALIYUN.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, smsProvider_);
+          .computeEnumSize(9, smsProvider_);
       }
       if (!getProviderKeyBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, providerKey_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, providerKey_);
       }
       if (!getProviderValueBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, providerValue_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, providerValue_);
       }
-      if (!getSignNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, signName_);
+      if (!getSendPathBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, sendPath_);
       }
-      if (!getTemplateCodeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, templateCode_);
-      }
-      if (!getTemplateContentBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, templateContent_);
+      if (!getTemplateParamBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, templateParam_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1233,19 +1038,31 @@ public final class ProtobufMessage {
       }
       xyz.shiqihao.misc.protobuf.ProtobufMessage.Message other = (xyz.shiqihao.misc.protobuf.ProtobufMessage.Message) obj;
 
-      if (!getUserInfoList()
-          .equals(other.getUserInfoList())) return false;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getSignName()
+          .equals(other.getSignName())) return false;
+      if (!getTemplateList()
+          .equals(other.getTemplateList())) return false;
+      if (!getReceiver()
+          .equals(other.getReceiver())) return false;
+      if (!getAreaCode()
+          .equals(other.getAreaCode())) return false;
+      if (!internalGetParameters().equals(
+          other.internalGetParameters())) return false;
+      if (getCreated()
+          != other.getCreated()) return false;
+      if (getExpires()
+          != other.getExpires()) return false;
       if (smsProvider_ != other.smsProvider_) return false;
       if (!getProviderKey()
           .equals(other.getProviderKey())) return false;
       if (!getProviderValue()
           .equals(other.getProviderValue())) return false;
-      if (!getSignName()
-          .equals(other.getSignName())) return false;
-      if (!getTemplateCode()
-          .equals(other.getTemplateCode())) return false;
-      if (!getTemplateContent()
-          .equals(other.getTemplateContent())) return false;
+      if (!getSendPath()
+          .equals(other.getSendPath())) return false;
+      if (!getTemplateParam()
+          .equals(other.getTemplateParam())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1257,22 +1074,37 @@ public final class ProtobufMessage {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getUserInfoCount() > 0) {
-        hash = (37 * hash) + USER_INFO_FIELD_NUMBER;
-        hash = (53 * hash) + getUserInfoList().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + SIGN_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getSignName().hashCode();
+      if (getTemplateCount() > 0) {
+        hash = (37 * hash) + TEMPLATE_FIELD_NUMBER;
+        hash = (53 * hash) + getTemplateList().hashCode();
       }
+      hash = (37 * hash) + RECEIVER_FIELD_NUMBER;
+      hash = (53 * hash) + getReceiver().hashCode();
+      hash = (37 * hash) + AREACODE_FIELD_NUMBER;
+      hash = (53 * hash) + getAreaCode().hashCode();
+      if (!internalGetParameters().getMap().isEmpty()) {
+        hash = (37 * hash) + PARAMETERS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetParameters().hashCode();
+      }
+      hash = (37 * hash) + CREATED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCreated());
+      hash = (37 * hash) + EXPIRES_FIELD_NUMBER;
+      hash = (53 * hash) + getExpires();
       hash = (37 * hash) + SMS_PROVIDER_FIELD_NUMBER;
       hash = (53 * hash) + smsProvider_;
       hash = (37 * hash) + PROVIDER_KEY_FIELD_NUMBER;
       hash = (53 * hash) + getProviderKey().hashCode();
       hash = (37 * hash) + PROVIDER_VALUE_FIELD_NUMBER;
       hash = (53 * hash) + getProviderValue().hashCode();
-      hash = (37 * hash) + SIGN_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getSignName().hashCode();
-      hash = (37 * hash) + TEMPLATE_CODE_FIELD_NUMBER;
-      hash = (53 * hash) + getTemplateCode().hashCode();
-      hash = (37 * hash) + TEMPLATE_CONTENT_FIELD_NUMBER;
-      hash = (53 * hash) + getTemplateContent().hashCode();
+      hash = (37 * hash) + SEND_PATH_FIELD_NUMBER;
+      hash = (53 * hash) + getSendPath().hashCode();
+      hash = (37 * hash) + TEMPLATE_PARAM_FIELD_NUMBER;
+      hash = (53 * hash) + getTemplateParam().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1380,6 +1212,28 @@ public final class ProtobufMessage {
         return xyz.shiqihao.misc.protobuf.ProtobufMessage.internal_static_protobuf_Message_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 6:
+            return internalGetParameters();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 6:
+            return internalGetMutableParameters();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -1401,29 +1255,35 @@ public final class ProtobufMessage {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getUserInfoFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (userInfoBuilder_ == null) {
-          userInfo_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        } else {
-          userInfoBuilder_.clear();
-        }
+        id_ = "";
+
+        signName_ = "";
+
+        template_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        receiver_ = "";
+
+        areaCode_ = "";
+
+        internalGetMutableParameters().clear();
+        created_ = 0L;
+
+        expires_ = 0;
+
         smsProvider_ = 0;
 
         providerKey_ = "";
 
         providerValue_ = "";
 
-        signName_ = "";
+        sendPath_ = "";
 
-        templateCode_ = "";
-
-        templateContent_ = "";
+        templateParam_ = "";
 
         return this;
       }
@@ -1453,21 +1313,24 @@ public final class ProtobufMessage {
         xyz.shiqihao.misc.protobuf.ProtobufMessage.Message result = new xyz.shiqihao.misc.protobuf.ProtobufMessage.Message(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
-        if (userInfoBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            userInfo_ = java.util.Collections.unmodifiableList(userInfo_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.userInfo_ = userInfo_;
-        } else {
-          result.userInfo_ = userInfoBuilder_.build();
+        result.id_ = id_;
+        result.signName_ = signName_;
+        if (((bitField0_ & 0x00000004) != 0)) {
+          template_ = template_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
+        result.template_ = template_;
+        result.receiver_ = receiver_;
+        result.areaCode_ = areaCode_;
+        result.parameters_ = internalGetParameters();
+        result.parameters_.makeImmutable();
+        result.created_ = created_;
+        result.expires_ = expires_;
         result.smsProvider_ = smsProvider_;
         result.providerKey_ = providerKey_;
         result.providerValue_ = providerValue_;
-        result.signName_ = signName_;
-        result.templateCode_ = templateCode_;
-        result.templateContent_ = templateContent_;
+        result.sendPath_ = sendPath_;
+        result.templateParam_ = templateParam_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1517,31 +1380,39 @@ public final class ProtobufMessage {
 
       public Builder mergeFrom(xyz.shiqihao.misc.protobuf.ProtobufMessage.Message other) {
         if (other == xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.getDefaultInstance()) return this;
-        if (userInfoBuilder_ == null) {
-          if (!other.userInfo_.isEmpty()) {
-            if (userInfo_.isEmpty()) {
-              userInfo_ = other.userInfo_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureUserInfoIsMutable();
-              userInfo_.addAll(other.userInfo_);
-            }
-            onChanged();
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (!other.getSignName().isEmpty()) {
+          signName_ = other.signName_;
+          onChanged();
+        }
+        if (!other.template_.isEmpty()) {
+          if (template_.isEmpty()) {
+            template_ = other.template_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureTemplateIsMutable();
+            template_.addAll(other.template_);
           }
-        } else {
-          if (!other.userInfo_.isEmpty()) {
-            if (userInfoBuilder_.isEmpty()) {
-              userInfoBuilder_.dispose();
-              userInfoBuilder_ = null;
-              userInfo_ = other.userInfo_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              userInfoBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getUserInfoFieldBuilder() : null;
-            } else {
-              userInfoBuilder_.addAllMessages(other.userInfo_);
-            }
-          }
+          onChanged();
+        }
+        if (!other.getReceiver().isEmpty()) {
+          receiver_ = other.receiver_;
+          onChanged();
+        }
+        if (!other.getAreaCode().isEmpty()) {
+          areaCode_ = other.areaCode_;
+          onChanged();
+        }
+        internalGetMutableParameters().mergeFrom(
+            other.internalGetParameters());
+        if (other.getCreated() != 0L) {
+          setCreated(other.getCreated());
+        }
+        if (other.getExpires() != 0) {
+          setExpires(other.getExpires());
         }
         if (other.smsProvider_ != 0) {
           setSmsProviderValue(other.getSmsProviderValue());
@@ -1554,16 +1425,12 @@ public final class ProtobufMessage {
           providerValue_ = other.providerValue_;
           onChanged();
         }
-        if (!other.getSignName().isEmpty()) {
-          signName_ = other.signName_;
+        if (!other.getSendPath().isEmpty()) {
+          sendPath_ = other.sendPath_;
           onChanged();
         }
-        if (!other.getTemplateCode().isEmpty()) {
-          templateCode_ = other.templateCode_;
-          onChanged();
-        }
-        if (!other.getTemplateContent().isEmpty()) {
-          templateContent_ = other.templateContent_;
+        if (!other.getTemplateParam().isEmpty()) {
+          templateParam_ = other.templateParam_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -1596,432 +1463,78 @@ public final class ProtobufMessage {
       }
       private int bitField0_;
 
-      private java.util.List<xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo> userInfo_ =
-        java.util.Collections.emptyList();
-      private void ensureUserInfoIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          userInfo_ = new java.util.ArrayList<xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo>(userInfo_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo, xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo.Builder, xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfoOrBuilder> userInfoBuilder_;
-
+      private java.lang.Object id_ = "";
       /**
-       * <code>repeated .protobuf.Message.UserInfo user_info = 1;</code>
+       * <code>string id = 1;</code>
        */
-      public java.util.List<xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo> getUserInfoList() {
-        if (userInfoBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(userInfo_);
-        } else {
-          return userInfoBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .protobuf.Message.UserInfo user_info = 1;</code>
-       */
-      public int getUserInfoCount() {
-        if (userInfoBuilder_ == null) {
-          return userInfo_.size();
-        } else {
-          return userInfoBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .protobuf.Message.UserInfo user_info = 1;</code>
-       */
-      public xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo getUserInfo(int index) {
-        if (userInfoBuilder_ == null) {
-          return userInfo_.get(index);
-        } else {
-          return userInfoBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .protobuf.Message.UserInfo user_info = 1;</code>
-       */
-      public Builder setUserInfo(
-          int index, xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo value) {
-        if (userInfoBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureUserInfoIsMutable();
-          userInfo_.set(index, value);
-          onChanged();
-        } else {
-          userInfoBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .protobuf.Message.UserInfo user_info = 1;</code>
-       */
-      public Builder setUserInfo(
-          int index, xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo.Builder builderForValue) {
-        if (userInfoBuilder_ == null) {
-          ensureUserInfoIsMutable();
-          userInfo_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          userInfoBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .protobuf.Message.UserInfo user_info = 1;</code>
-       */
-      public Builder addUserInfo(xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo value) {
-        if (userInfoBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureUserInfoIsMutable();
-          userInfo_.add(value);
-          onChanged();
-        } else {
-          userInfoBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .protobuf.Message.UserInfo user_info = 1;</code>
-       */
-      public Builder addUserInfo(
-          int index, xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo value) {
-        if (userInfoBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureUserInfoIsMutable();
-          userInfo_.add(index, value);
-          onChanged();
-        } else {
-          userInfoBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .protobuf.Message.UserInfo user_info = 1;</code>
-       */
-      public Builder addUserInfo(
-          xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo.Builder builderForValue) {
-        if (userInfoBuilder_ == null) {
-          ensureUserInfoIsMutable();
-          userInfo_.add(builderForValue.build());
-          onChanged();
-        } else {
-          userInfoBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .protobuf.Message.UserInfo user_info = 1;</code>
-       */
-      public Builder addUserInfo(
-          int index, xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo.Builder builderForValue) {
-        if (userInfoBuilder_ == null) {
-          ensureUserInfoIsMutable();
-          userInfo_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          userInfoBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .protobuf.Message.UserInfo user_info = 1;</code>
-       */
-      public Builder addAllUserInfo(
-          java.lang.Iterable<? extends xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo> values) {
-        if (userInfoBuilder_ == null) {
-          ensureUserInfoIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, userInfo_);
-          onChanged();
-        } else {
-          userInfoBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .protobuf.Message.UserInfo user_info = 1;</code>
-       */
-      public Builder clearUserInfo() {
-        if (userInfoBuilder_ == null) {
-          userInfo_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          userInfoBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .protobuf.Message.UserInfo user_info = 1;</code>
-       */
-      public Builder removeUserInfo(int index) {
-        if (userInfoBuilder_ == null) {
-          ensureUserInfoIsMutable();
-          userInfo_.remove(index);
-          onChanged();
-        } else {
-          userInfoBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .protobuf.Message.UserInfo user_info = 1;</code>
-       */
-      public xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo.Builder getUserInfoBuilder(
-          int index) {
-        return getUserInfoFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .protobuf.Message.UserInfo user_info = 1;</code>
-       */
-      public xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfoOrBuilder getUserInfoOrBuilder(
-          int index) {
-        if (userInfoBuilder_ == null) {
-          return userInfo_.get(index);  } else {
-          return userInfoBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .protobuf.Message.UserInfo user_info = 1;</code>
-       */
-      public java.util.List<? extends xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfoOrBuilder> 
-           getUserInfoOrBuilderList() {
-        if (userInfoBuilder_ != null) {
-          return userInfoBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(userInfo_);
-        }
-      }
-      /**
-       * <code>repeated .protobuf.Message.UserInfo user_info = 1;</code>
-       */
-      public xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo.Builder addUserInfoBuilder() {
-        return getUserInfoFieldBuilder().addBuilder(
-            xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .protobuf.Message.UserInfo user_info = 1;</code>
-       */
-      public xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo.Builder addUserInfoBuilder(
-          int index) {
-        return getUserInfoFieldBuilder().addBuilder(
-            index, xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .protobuf.Message.UserInfo user_info = 1;</code>
-       */
-      public java.util.List<xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo.Builder> 
-           getUserInfoBuilderList() {
-        return getUserInfoFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo, xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo.Builder, xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfoOrBuilder> 
-          getUserInfoFieldBuilder() {
-        if (userInfoBuilder_ == null) {
-          userInfoBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo, xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfo.Builder, xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.UserInfoOrBuilder>(
-                  userInfo_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          userInfo_ = null;
-        }
-        return userInfoBuilder_;
-      }
-
-      private int smsProvider_ = 0;
-      /**
-       * <code>.protobuf.Message.SmsProvider sms_provider = 2;</code>
-       */
-      public int getSmsProviderValue() {
-        return smsProvider_;
-      }
-      /**
-       * <code>.protobuf.Message.SmsProvider sms_provider = 2;</code>
-       */
-      public Builder setSmsProviderValue(int value) {
-        smsProvider_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.protobuf.Message.SmsProvider sms_provider = 2;</code>
-       */
-      public xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.SmsProvider getSmsProvider() {
-        @SuppressWarnings("deprecation")
-        xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.SmsProvider result = xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.SmsProvider.valueOf(smsProvider_);
-        return result == null ? xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.SmsProvider.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>.protobuf.Message.SmsProvider sms_provider = 2;</code>
-       */
-      public Builder setSmsProvider(xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.SmsProvider value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        smsProvider_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.protobuf.Message.SmsProvider sms_provider = 2;</code>
-       */
-      public Builder clearSmsProvider() {
-        
-        smsProvider_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object providerKey_ = "";
-      /**
-       * <code>string provider_key = 3;</code>
-       */
-      public java.lang.String getProviderKey() {
-        java.lang.Object ref = providerKey_;
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          providerKey_ = s;
+          id_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string provider_key = 3;</code>
+       * <code>string id = 1;</code>
        */
       public com.google.protobuf.ByteString
-          getProviderKeyBytes() {
-        java.lang.Object ref = providerKey_;
+          getIdBytes() {
+        java.lang.Object ref = id_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          providerKey_ = b;
+          id_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string provider_key = 3;</code>
+       * <code>string id = 1;</code>
        */
-      public Builder setProviderKey(
+      public Builder setId(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        providerKey_ = value;
+        id_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string provider_key = 3;</code>
+       * <code>string id = 1;</code>
        */
-      public Builder clearProviderKey() {
+      public Builder clearId() {
         
-        providerKey_ = getDefaultInstance().getProviderKey();
+        id_ = getDefaultInstance().getId();
         onChanged();
         return this;
       }
       /**
-       * <code>string provider_key = 3;</code>
+       * <code>string id = 1;</code>
        */
-      public Builder setProviderKeyBytes(
+      public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        providerKey_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object providerValue_ = "";
-      /**
-       * <code>string provider_value = 4;</code>
-       */
-      public java.lang.String getProviderValue() {
-        java.lang.Object ref = providerValue_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          providerValue_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string provider_value = 4;</code>
-       */
-      public com.google.protobuf.ByteString
-          getProviderValueBytes() {
-        java.lang.Object ref = providerValue_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          providerValue_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string provider_value = 4;</code>
-       */
-      public Builder setProviderValue(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        providerValue_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string provider_value = 4;</code>
-       */
-      public Builder clearProviderValue() {
-        
-        providerValue_ = getDefaultInstance().getProviderValue();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string provider_value = 4;</code>
-       */
-      public Builder setProviderValueBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        providerValue_ = value;
+        id_ = value;
         onChanged();
         return this;
       }
 
       private java.lang.Object signName_ = "";
       /**
-       * <code>string sign_name = 5;</code>
+       * <code>string sign_name = 2;</code>
        */
       public java.lang.String getSignName() {
         java.lang.Object ref = signName_;
@@ -2036,7 +1549,7 @@ public final class ProtobufMessage {
         }
       }
       /**
-       * <code>string sign_name = 5;</code>
+       * <code>string sign_name = 2;</code>
        */
       public com.google.protobuf.ByteString
           getSignNameBytes() {
@@ -2052,7 +1565,7 @@ public final class ProtobufMessage {
         }
       }
       /**
-       * <code>string sign_name = 5;</code>
+       * <code>string sign_name = 2;</code>
        */
       public Builder setSignName(
           java.lang.String value) {
@@ -2065,7 +1578,7 @@ public final class ProtobufMessage {
         return this;
       }
       /**
-       * <code>string sign_name = 5;</code>
+       * <code>string sign_name = 2;</code>
        */
       public Builder clearSignName() {
         
@@ -2074,7 +1587,7 @@ public final class ProtobufMessage {
         return this;
       }
       /**
-       * <code>string sign_name = 5;</code>
+       * <code>string sign_name = 2;</code>
        */
       public Builder setSignNameBytes(
           com.google.protobuf.ByteString value) {
@@ -2088,140 +1601,770 @@ public final class ProtobufMessage {
         return this;
       }
 
-      private java.lang.Object templateCode_ = "";
-      /**
-       * <code>string template_code = 6;</code>
-       */
-      public java.lang.String getTemplateCode() {
-        java.lang.Object ref = templateCode_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          templateCode_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      private com.google.protobuf.LazyStringList template_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTemplateIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          template_ = new com.google.protobuf.LazyStringArrayList(template_);
+          bitField0_ |= 0x00000004;
+         }
       }
       /**
-       * <code>string template_code = 6;</code>
+       * <code>repeated string template = 3;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTemplateList() {
+        return template_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string template = 3;</code>
+       */
+      public int getTemplateCount() {
+        return template_.size();
+      }
+      /**
+       * <code>repeated string template = 3;</code>
+       */
+      public java.lang.String getTemplate(int index) {
+        return template_.get(index);
+      }
+      /**
+       * <code>repeated string template = 3;</code>
        */
       public com.google.protobuf.ByteString
-          getTemplateCodeBytes() {
-        java.lang.Object ref = templateCode_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          templateCode_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+          getTemplateBytes(int index) {
+        return template_.getByteString(index);
       }
       /**
-       * <code>string template_code = 6;</code>
+       * <code>repeated string template = 3;</code>
        */
-      public Builder setTemplateCode(
+      public Builder setTemplate(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTemplateIsMutable();
+        template_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string template = 3;</code>
+       */
+      public Builder addTemplate(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  
-        templateCode_ = value;
+  ensureTemplateIsMutable();
+        template_.add(value);
         onChanged();
         return this;
       }
       /**
-       * <code>string template_code = 6;</code>
+       * <code>repeated string template = 3;</code>
        */
-      public Builder clearTemplateCode() {
-        
-        templateCode_ = getDefaultInstance().getTemplateCode();
+      public Builder addAllTemplate(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTemplateIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, template_);
         onChanged();
         return this;
       }
       /**
-       * <code>string template_code = 6;</code>
+       * <code>repeated string template = 3;</code>
        */
-      public Builder setTemplateCodeBytes(
+      public Builder clearTemplate() {
+        template_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string template = 3;</code>
+       */
+      public Builder addTemplateBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-        
-        templateCode_ = value;
+        ensureTemplateIsMutable();
+        template_.add(value);
         onChanged();
         return this;
       }
 
-      private java.lang.Object templateContent_ = "";
+      private java.lang.Object receiver_ = "";
       /**
-       * <code>string template_content = 7;</code>
+       * <code>string receiver = 4;</code>
        */
-      public java.lang.String getTemplateContent() {
-        java.lang.Object ref = templateContent_;
+      public java.lang.String getReceiver() {
+        java.lang.Object ref = receiver_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          templateContent_ = s;
+          receiver_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string template_content = 7;</code>
+       * <code>string receiver = 4;</code>
        */
       public com.google.protobuf.ByteString
-          getTemplateContentBytes() {
-        java.lang.Object ref = templateContent_;
+          getReceiverBytes() {
+        java.lang.Object ref = receiver_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          templateContent_ = b;
+          receiver_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string template_content = 7;</code>
+       * <code>string receiver = 4;</code>
        */
-      public Builder setTemplateContent(
+      public Builder setReceiver(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        templateContent_ = value;
+        receiver_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string template_content = 7;</code>
+       * <code>string receiver = 4;</code>
        */
-      public Builder clearTemplateContent() {
+      public Builder clearReceiver() {
         
-        templateContent_ = getDefaultInstance().getTemplateContent();
+        receiver_ = getDefaultInstance().getReceiver();
         onChanged();
         return this;
       }
       /**
-       * <code>string template_content = 7;</code>
+       * <code>string receiver = 4;</code>
        */
-      public Builder setTemplateContentBytes(
+      public Builder setReceiverBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        templateContent_ = value;
+        receiver_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object areaCode_ = "";
+      /**
+       * <code>string areaCode = 5;</code>
+       */
+      public java.lang.String getAreaCode() {
+        java.lang.Object ref = areaCode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          areaCode_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string areaCode = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAreaCodeBytes() {
+        java.lang.Object ref = areaCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          areaCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string areaCode = 5;</code>
+       */
+      public Builder setAreaCode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        areaCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string areaCode = 5;</code>
+       */
+      public Builder clearAreaCode() {
+        
+        areaCode_ = getDefaultInstance().getAreaCode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string areaCode = 5;</code>
+       */
+      public Builder setAreaCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        areaCode_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> parameters_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetParameters() {
+        if (parameters_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              ParametersDefaultEntryHolder.defaultEntry);
+        }
+        return parameters_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableParameters() {
+        onChanged();;
+        if (parameters_ == null) {
+          parameters_ = com.google.protobuf.MapField.newMapField(
+              ParametersDefaultEntryHolder.defaultEntry);
+        }
+        if (!parameters_.isMutable()) {
+          parameters_ = parameters_.copy();
+        }
+        return parameters_;
+      }
+
+      public int getParametersCount() {
+        return internalGetParameters().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, string&gt; parameters = 6;</code>
+       */
+
+      public boolean containsParameters(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetParameters().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getParametersMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getParameters() {
+        return getParametersMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; parameters = 6;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getParametersMap() {
+        return internalGetParameters().getMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; parameters = 6;</code>
+       */
+
+      public java.lang.String getParametersOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetParameters().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, string&gt; parameters = 6;</code>
+       */
+
+      public java.lang.String getParametersOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetParameters().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearParameters() {
+        internalGetMutableParameters().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; parameters = 6;</code>
+       */
+
+      public Builder removeParameters(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableParameters().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableParameters() {
+        return internalGetMutableParameters().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; parameters = 6;</code>
+       */
+      public Builder putParameters(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableParameters().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; parameters = 6;</code>
+       */
+
+      public Builder putAllParameters(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableParameters().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
+      private long created_ ;
+      /**
+       * <code>int64 created = 7;</code>
+       */
+      public long getCreated() {
+        return created_;
+      }
+      /**
+       * <code>int64 created = 7;</code>
+       */
+      public Builder setCreated(long value) {
+        
+        created_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 created = 7;</code>
+       */
+      public Builder clearCreated() {
+        
+        created_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int expires_ ;
+      /**
+       * <code>int32 expires = 8;</code>
+       */
+      public int getExpires() {
+        return expires_;
+      }
+      /**
+       * <code>int32 expires = 8;</code>
+       */
+      public Builder setExpires(int value) {
+        
+        expires_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 expires = 8;</code>
+       */
+      public Builder clearExpires() {
+        
+        expires_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int smsProvider_ = 0;
+      /**
+       * <code>.protobuf.Message.SmsProvider sms_provider = 9;</code>
+       */
+      public int getSmsProviderValue() {
+        return smsProvider_;
+      }
+      /**
+       * <code>.protobuf.Message.SmsProvider sms_provider = 9;</code>
+       */
+      public Builder setSmsProviderValue(int value) {
+        smsProvider_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.protobuf.Message.SmsProvider sms_provider = 9;</code>
+       */
+      public xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.SmsProvider getSmsProvider() {
+        @SuppressWarnings("deprecation")
+        xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.SmsProvider result = xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.SmsProvider.valueOf(smsProvider_);
+        return result == null ? xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.SmsProvider.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.protobuf.Message.SmsProvider sms_provider = 9;</code>
+       */
+      public Builder setSmsProvider(xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.SmsProvider value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        smsProvider_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.protobuf.Message.SmsProvider sms_provider = 9;</code>
+       */
+      public Builder clearSmsProvider() {
+        
+        smsProvider_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object providerKey_ = "";
+      /**
+       * <code>string provider_key = 10;</code>
+       */
+      public java.lang.String getProviderKey() {
+        java.lang.Object ref = providerKey_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          providerKey_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string provider_key = 10;</code>
+       */
+      public com.google.protobuf.ByteString
+          getProviderKeyBytes() {
+        java.lang.Object ref = providerKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          providerKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string provider_key = 10;</code>
+       */
+      public Builder setProviderKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        providerKey_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string provider_key = 10;</code>
+       */
+      public Builder clearProviderKey() {
+        
+        providerKey_ = getDefaultInstance().getProviderKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string provider_key = 10;</code>
+       */
+      public Builder setProviderKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        providerKey_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object providerValue_ = "";
+      /**
+       * <code>string provider_value = 12;</code>
+       */
+      public java.lang.String getProviderValue() {
+        java.lang.Object ref = providerValue_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          providerValue_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string provider_value = 12;</code>
+       */
+      public com.google.protobuf.ByteString
+          getProviderValueBytes() {
+        java.lang.Object ref = providerValue_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          providerValue_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string provider_value = 12;</code>
+       */
+      public Builder setProviderValue(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        providerValue_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string provider_value = 12;</code>
+       */
+      public Builder clearProviderValue() {
+        
+        providerValue_ = getDefaultInstance().getProviderValue();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string provider_value = 12;</code>
+       */
+      public Builder setProviderValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        providerValue_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sendPath_ = "";
+      /**
+       * <pre>
+       * 请求供应商的地址,部分厂商需要设置.
+       * </pre>
+       *
+       * <code>string send_path = 13;</code>
+       */
+      public java.lang.String getSendPath() {
+        java.lang.Object ref = sendPath_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sendPath_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 请求供应商的地址,部分厂商需要设置.
+       * </pre>
+       *
+       * <code>string send_path = 13;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSendPathBytes() {
+        java.lang.Object ref = sendPath_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sendPath_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 请求供应商的地址,部分厂商需要设置.
+       * </pre>
+       *
+       * <code>string send_path = 13;</code>
+       */
+      public Builder setSendPath(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        sendPath_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 请求供应商的地址,部分厂商需要设置.
+       * </pre>
+       *
+       * <code>string send_path = 13;</code>
+       */
+      public Builder clearSendPath() {
+        
+        sendPath_ = getDefaultInstance().getSendPath();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 请求供应商的地址,部分厂商需要设置.
+       * </pre>
+       *
+       * <code>string send_path = 13;</code>
+       */
+      public Builder setSendPathBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        sendPath_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object templateParam_ = "";
+      /**
+       * <pre>
+       * 短信模板中的变量,部分厂商需要
+       * </pre>
+       *
+       * <code>string template_param = 14;</code>
+       */
+      public java.lang.String getTemplateParam() {
+        java.lang.Object ref = templateParam_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          templateParam_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 短信模板中的变量,部分厂商需要
+       * </pre>
+       *
+       * <code>string template_param = 14;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTemplateParamBytes() {
+        java.lang.Object ref = templateParam_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          templateParam_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 短信模板中的变量,部分厂商需要
+       * </pre>
+       *
+       * <code>string template_param = 14;</code>
+       */
+      public Builder setTemplateParam(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        templateParam_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 短信模板中的变量,部分厂商需要
+       * </pre>
+       *
+       * <code>string template_param = 14;</code>
+       */
+      public Builder clearTemplateParam() {
+        
+        templateParam_ = getDefaultInstance().getTemplateParam();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 短信模板中的变量,部分厂商需要
+       * </pre>
+       *
+       * <code>string template_param = 14;</code>
+       */
+      public Builder setTemplateParamBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        templateParam_ = value;
         onChanged();
         return this;
       }
@@ -2284,10 +2427,10 @@ public final class ProtobufMessage {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_protobuf_Message_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_protobuf_Message_UserInfo_descriptor;
+    internal_static_protobuf_Message_ParametersEntry_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_protobuf_Message_UserInfo_fieldAccessorTable;
+      internal_static_protobuf_Message_ParametersEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2298,15 +2441,19 @@ public final class ProtobufMessage {
   static {
     java.lang.String[] descriptorData = {
       "\n\037src/main/protobuf/message.proto\022\010proto" +
-      "buf\"\242\002\n\007Message\022-\n\tuser_info\030\001 \003(\0132\032.pro" +
-      "tobuf.Message.UserInfo\0223\n\014sms_provider\030\002" +
-      " \001(\0162\035.protobuf.Message.SmsProvider\022\024\n\014p" +
-      "rovider_key\030\003 \001(\t\022\026\n\016provider_value\030\004 \001(" +
-      "\t\022\021\n\tsign_name\030\005 \001(\t\022\025\n\rtemplate_code\030\006 " +
-      "\001(\t\022\030\n\020template_content\030\007 \001(\t\032\031\n\010UserInf" +
-      "o\022\r\n\005value\030\001 \003(\t\"&\n\013SmsProvider\022\n\n\006ALIYU" +
-      "N\020\000\022\013\n\007YUNPIAN\020\001B-\n\032xyz.shiqihao.misc.pr" +
-      "otobufB\017ProtobufMessageb\006proto3"
+      "buf\"\257\003\n\007Message\022\n\n\002id\030\001 \001(\t\022\021\n\tsign_name" +
+      "\030\002 \001(\t\022\020\n\010template\030\003 \003(\t\022\020\n\010receiver\030\004 \001" +
+      "(\t\022\020\n\010areaCode\030\005 \001(\t\0225\n\nparameters\030\006 \003(\013" +
+      "2!.protobuf.Message.ParametersEntry\022\017\n\007c" +
+      "reated\030\007 \001(\003\022\017\n\007expires\030\010 \001(\005\0223\n\014sms_pro" +
+      "vider\030\t \001(\0162\035.protobuf.Message.SmsProvid" +
+      "er\022\024\n\014provider_key\030\n \001(\t\022\026\n\016provider_val" +
+      "ue\030\014 \001(\t\022\021\n\tsend_path\030\r \001(\t\022\026\n\016template_" +
+      "param\030\016 \001(\t\0321\n\017ParametersEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"5\n\013SmsProvider\022\n\n" +
+      "\006ALIYUN\020\000\022\013\n\007YUNPIAN\020\001\022\r\n\tCHUANGLAN\020\002B-\n" +
+      "\032xyz.shiqihao.misc.protobufB\017ProtobufMes" +
+      "sageb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2325,13 +2472,13 @@ public final class ProtobufMessage {
     internal_static_protobuf_Message_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protobuf_Message_descriptor,
-        new java.lang.String[] { "UserInfo", "SmsProvider", "ProviderKey", "ProviderValue", "SignName", "TemplateCode", "TemplateContent", });
-    internal_static_protobuf_Message_UserInfo_descriptor =
+        new java.lang.String[] { "Id", "SignName", "Template", "Receiver", "AreaCode", "Parameters", "Created", "Expires", "SmsProvider", "ProviderKey", "ProviderValue", "SendPath", "TemplateParam", });
+    internal_static_protobuf_Message_ParametersEntry_descriptor =
       internal_static_protobuf_Message_descriptor.getNestedTypes().get(0);
-    internal_static_protobuf_Message_UserInfo_fieldAccessorTable = new
+    internal_static_protobuf_Message_ParametersEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_protobuf_Message_UserInfo_descriptor,
-        new java.lang.String[] { "Value", });
+        internal_static_protobuf_Message_ParametersEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

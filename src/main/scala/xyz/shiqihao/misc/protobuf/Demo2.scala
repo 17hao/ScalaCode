@@ -1,33 +1,30 @@
 package xyz.shiqihao.misc.protobuf
 
+import com.google.gson.Gson
+import xyz.shiqihao.misc.protobuf.ProtobufMessage.Message
+
 import scala.collection.JavaConverters._
 
 object Main extends App {
 
   def initial(): ProtobufMessage.Message = {
-    val infoList = List(UserInfo(Seq("15968912980", "sqh")), UserInfo(Seq("15868170425", "lyj")))
-    val temp = infoList.map { i =>
-      ProtobufMessage.Message.UserInfo.newBuilder().addAllValue(i.seq.asJava).build()
-    }
-    ProtobufMessage.Message.newBuilder()
-      .setProviderKey("key")
-      .setProviderValue("value")
-      .setSignName("signName")
-      .setTemplateCode("SMS-123")
-      .setSmsProvider(ProtobufMessage.Message.SmsProvider.ALIYUN)
-      .addAllUserInfo(temp.asJava)
+    val infoList = Seq(UserInfo(Seq("15968912980", "sqh", "23")), UserInfo(Seq("15868170425", "lyj", "23")))
+    val params = Seq("{user}", "{age}")
+    val numbers = infoList.map(u => u.seq.head)
+    val temp = infoList.map(_.seq.tail)
+    val paramValues = new Gson().toJson(
+      temp.map { v =>
+        params.map(_.replaceAll("[{}]", "")).zip(v).toMap
+      }.map(_.asJava).asJava
+    )
+    Message.newBuilder()
+      .setReceiver(new Gson().toJson(numbers.asJava))
+      .addTemplate("SMS-123")
+      .setTemplateParam(paramValues)
       .build()
   }
 
-  def getProvider: String = {
-    initial().getSmsProvider match {
-      case ProtobufMessage.Message.SmsProvider.ALIYUN => "aliyun"
-      case _ => "other"
-    }
-  }
-
-  println(getProvider)
-  println(initial().getUserInfoList.asScala.map(_.getValueList.asScala.head))
+  println(initial())
 }
 
 final case class UserInfo(seq: Seq[String])

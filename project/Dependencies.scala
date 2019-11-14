@@ -16,10 +16,11 @@ object Dependencies {
     "io.grpc" % "grpc-stub" % "1.23.0"
     "io.grpc" % "grpc-netty-shaded" % "1.23.0"
   }
-
+  val yunpian =  "com.yunpian.sdk" % "yunpian-java-sdk" % "1.2.7"
+  val disruptor = "com.lmax" % "disruptor" % "3.4.2"
   // Projects
   val dependencies: Seq[ModuleID] =
     Seq(
-      rediscala, gson, kafka, test, guice
+      rediscala, gson, kafka, test, guice, yunpian, disruptor
     ) ++ akka ++ grpc
 }

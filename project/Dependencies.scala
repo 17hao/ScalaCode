@@ -10,17 +10,20 @@ object Dependencies {
   val akka: Seq[ModuleID] = Seq {
     "com.typesafe.akka" %% "akka-actor" % "2.5.26"
     "com.typesafe.akka" %% "akka-stream" % "2.5.26"
+    "com.typesafe.akka" %% "akka-actor-typed" % "2.6.0"
   }
   val grpc: Seq[ModuleID] = Seq {
     "io.grpc" % "grpc-protobuf" % "1.23.0"
     "io.grpc" % "grpc-stub" % "1.23.0"
     "io.grpc" % "grpc-netty-shaded" % "1.23.0"
   }
-  val yunpian =  "com.yunpian.sdk" % "yunpian-java-sdk" % "1.2.7"
+  val yunpian = "com.yunpian.sdk" % "yunpian-java-sdk" % "1.2.7"
+  val aliyun = "com.aliyun" % "aliyun-java-sdk-core" % "4.1.0"
   val disruptor = "com.lmax" % "disruptor" % "3.4.2"
+  val config = "com.typesafe" % "config" % "1.3.1"
   // Projects
   val dependencies: Seq[ModuleID] =
     Seq(
-      rediscala, gson, kafka, test, guice, yunpian, disruptor
+      rediscala, gson, kafka, test, guice, yunpian, aliyun, disruptor, config
     ) ++ akka ++ grpc
 }

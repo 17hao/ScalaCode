@@ -1,4 +1,4 @@
-package xyz.shiqihao.misc.sms;
+package xyz.shiqihao.misc.sms.chuanglan;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

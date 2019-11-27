@@ -6,4 +6,4 @@ lazy val scalacode = (project in file(".")).settings(
     libraryDependencies ++= dependencies
   )
 
-resourceDirectory in Compile := file("src/main/protobuf")
+unmanagedResourceDirectories in Compile += baseDirectory.value / "conf"

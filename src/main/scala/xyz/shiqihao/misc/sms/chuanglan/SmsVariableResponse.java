@@ -1,4 +1,4 @@
-package xyz.shiqihao.misc.sms;
+package xyz.shiqihao.misc.sms.chuanglan;
 
 public class SmsVariableResponse {
     /**

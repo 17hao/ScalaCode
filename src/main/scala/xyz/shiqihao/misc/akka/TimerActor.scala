@@ -11,7 +11,7 @@ class TimerActor extends Actor with Timers with ActorLogging {
 
   private def tickJob(): PartialFunction[Any, Unit] = {
     case FirstTick =>
-      timers.startPeriodicTimer(TimerKey, Tick, ofMillis(3000))
+      timers.startTimerWithFixedDelay(TimerKey, Tick, ofMillis(3000))
       log.info("Starting timer...")
     case Tick =>
       log.info(s"periodic job executes in ${LocalDate.now()}")

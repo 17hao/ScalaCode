@@ -2,6 +2,7 @@ package xyz.shiqihao.misc.protobuf
 
 import com.google.gson.Gson
 import xyz.shiqihao.misc.protobuf.ProtobufMessage.Message
+import xyz.shiqihao.misc.protobuf.ProtobufMessage.Message.SmsProvider
 
 import scala.collection.JavaConverters._
 
@@ -21,10 +22,12 @@ object Main extends App {
       .setReceiver(new Gson().toJson(numbers.asJava))
       .addTemplate("SMS-123")
       .setTemplateParam(paramValues)
+      .setSmsProvider(SmsProvider.ALIYUN)
       .build()
   }
 
-  println(initial())
+  println(String.valueOf(initial().getSmsProvider))
+  println(initial().getAreaCode.getClass) // String
 }
 
 final case class UserInfo(seq: Seq[String])

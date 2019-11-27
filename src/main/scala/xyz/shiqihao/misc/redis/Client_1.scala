@@ -5,7 +5,7 @@ import redis.RedisClient
 
 import scala.concurrent.ExecutionContext.Implicits.global
 
-object Client extends App {
+object Client_1 extends App {
   implicit val akkaSystem: ActorSystem = akka.actor.ActorSystem()
   val client = RedisClient()
   println("Ping sent!")

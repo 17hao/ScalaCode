@@ -6,4 +6,4 @@ lazy val scalacode = (project in file(".")).settings(
     libraryDependencies ++= dependencies
   )
 
-unmanagedResourceDirectories in Compile += baseDirectory.value / "conf"
+enablePlugins(ProtobufPlugin)
